@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>English Corner</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f9ee;--card:#fff;--ink:#27321f;--mut:#667559;--g:#8fb85a;--gd:#4a6b2f;--gl:#e4efd0;--ok:#3f7d31;--okb:#e3f2da;--no:#a8472f;--nob:#fbe9e3;--line:#dbe5c9;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171d12;--card:#212a1a;--ink:#e8f0dc;--mut:#a3b392;--g:#8fb85a;--gd:#b5d88a;--gl:#2c3a21;--ok:#9bd484;--okb:#25361e;--no:#f0a08a;--nob:#3b2620;--line:#35432a}}
+:root[data-theme="dark"]{--bg:#171d12;--card:#212a1a;--ink:#e8f0dc;--mut:#a3b392;--g:#8fb85a;--gd:#b5d88a;--gl:#2c3a21;--ok:#9bd484;--okb:#25361e;--no:#f0a08a;--nob:#3b2620;--line:#35432a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:500 16px/1.55 Quicksand,Nunito,system-ui,sans-serif}
+main{max-width:860px;margin:0 auto;padding:24px 16px 40px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:12;background:var(--card)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--card);border-bottom:1px solid var(--line)}
+.bar-in{max-width:860px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;background:none;border:0;cursor:pointer;padding:0;font:600 22px Fredoka,Quicksand,sans-serif;color:var(--gd)}
+.hero{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:28px 30px;margin-bottom:22px;border-radius:22px;background:linear-gradient(135deg,var(--gl),var(--card));border:1px solid var(--line)}
+.hero h1{font-size:32px}.hero p{margin:10px 0 0;color:var(--mut);max-width:46ch}.hero svg{flex:none}
+@media (max-width:560px){.hero svg{display:none}.hero{padding:22px 20px}.hero h1{font-size:26px}}
+.ft{max-width:860px;margin:16px auto 0;padding:22px 16px calc(32px + env(safe-area-inset-bottom,0px));text-align:center;color:var(--mut);font-size:14px;border-top:1px solid var(--line)}
+h1,h2,h3{font-family:Fredoka,Quicksand,system-ui,sans-serif;font-weight:600;line-height:1.2;margin:0}
+h1{font-size:30px;color:var(--gd)}h2{font-size:22px;margin-bottom:6px}h3{font-size:17px;margin:20px 0 8px}
+.sub{color:var(--mut);margin:4px 0 18px}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav button{background:none;border:0;padding:8px 16px;font:700 15px Quicksand,Nunito,sans-serif;color:var(--mut);cursor:pointer;border-radius:99px}
+nav button:hover{background:var(--bg)}
+nav button.on{color:var(--gd);background:var(--gl)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:12px}
+.act{display:flex;justify-content:space-between;align-items:center;gap:12px;cursor:pointer}
+.act:hover{border-color:var(--g)}
+.chip{font:700 13px Quicksand,Nunito,sans-serif;padding:3px 10px;border-radius:99px;background:var(--gl);color:var(--gd);white-space:nowrap}
+.chip.ok{background:var(--okb);color:var(--ok)}
+button.p{background:var(--g);color:#1d2a13;border:0;border-radius:10px;padding:11px 20px;font:700 16px Quicksand,Nunito,sans-serif;cursor:pointer}
+button.p:hover{filter:brightness(.95)}
+button.s{background:none;border:1px solid var(--line);color:var(--gd);border-radius:10px;padding:8px 14px;font:700 14px Quicksand,Nunito,sans-serif;cursor:pointer}
+:focus-visible{outline:3px solid var(--g);outline-offset:2px}
+details.th{background:var(--gl);border-radius:14px;padding:4px 18px;margin:14px 0}
+details.th summary{cursor:pointer;font:600 18px Fredoka,Quicksand,sans-serif;padding:12px 0;color:var(--gd)}
+details.th .b{padding-bottom:12px}
+details.th b{color:var(--gd)}details.th p{margin:6px 0}
+.ex{margin:12px 0;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.ex.ok{border-color:var(--ok);background:var(--okb)}.ex.no{border-color:var(--no);background:var(--nob)}
+.q{margin:0 0 8px;font-weight:600}
+.opt{display:block;padding:7px 10px;margin:4px 0;border-radius:8px;cursor:pointer;border:1px solid var(--line);background:var(--card)}
+.opt:has(input:checked){border-color:var(--g);background:var(--gl)}
+.opt input{margin-right:8px;accent-color:#6f9a3c}
+input[type=text],textarea{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:7px 10px;width:100%}
+input.in{width:170px;display:inline-block;margin:0 4px}
+textarea{min-height:76px;resize:vertical}
+.fb{margin-top:10px;font-size:15px}
+.why{margin-top:8px;padding:10px 12px;border-radius:10px;background:var(--card);border-left:4px solid var(--no)}
+.good{color:var(--ok);font-weight:700}.bad{color:var(--no);font-weight:700}
+.note{background:var(--gl);border-radius:10px;padding:10px 14px;margin-bottom:14px;font-size:14px}
+.sc{font:600 26px Fredoka,Quicksand,sans-serif;color:var(--gd)}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}
+.bar{height:10px;border-radius:9px;background:var(--gl);overflow:hidden;margin:8px 0}.bar i{display:block;height:100%;background:var(--g)}
+@media (prefers-reduced-motion:no-preference){.bar i{transition:width .5s}}
+body,input,textarea,button,nav button,button.p,button.s,.brand,.chip,.sc,details.th summary{font-family:Nunito,system-ui,sans-serif}
+h1,h2,h3{font-family:Nunito,system-ui,sans-serif;font-weight:800;letter-spacing:-.01em}
+.hero{padding:40px 0 32px;margin-bottom:24px;border:0;border-bottom:1px solid var(--line);border-radius:0;background:none}
+nav button{border-radius:0;border-bottom:3px solid transparent;padding:10px 14px}
+nav button.on{background:none;border-bottom-color:var(--g)}
+nav button:hover{background:none;color:var(--gd)}
+.card,.ex,details.th{border-radius:8px}
+.opt,button.p,button.s,input[type=text],textarea,.why,.note{border-radius:6px}
+</style></head>
+<body><header class="top" id="top"></header><main id="app"></main><footer class="ft">English Corner · Practice between classes</footer>
+<script>
+const ACTS=[
+{id:'modals',title:'Modals: rules and advice',tag:'Class 3',
+theory:`<p><b>must / have to</b>: obligation, a rule or a law. <i>You must stop at a red light.</i></p>
+<p><b>mustn't</b>: it is prohibited. <i>You mustn't drive over the speed limit.</i></p>
+<p><b>don't have to</b>: it is not necessary; it is your choice. <i>You don't have to wash your car.</i> Careful: <u>it is not the same as prohibited</u>.</p>
+<p><b>should</b>: advice, a good idea. <i>You should take a break.</i></p>
+<p><b>can</b>: permission or possibility. <i>You can park here for free.</i></p>
+<p>After must, should and can we use the verb <u>without to</u>: <i>must finish</i> ✓ / <i>must to finish</i> ✗. The exception is <b>ought to</b>, which does take to.</p>`,
+items:[
+{id:'a1',t:'mc',q:'You ___ stop when the traffic light is red. It is the law.',o:['must','don\'t have to','should'],a:'must',why:'It is a law, an external obligation. For rules and laws we use <b>must</b> or <b>have to</b>.'},
+{id:'a2',t:'mc',q:'You ___ drive over the speed limit. It is dangerous and illegal.',o:['don\'t have to','mustn\'t','can'],a:'mustn\'t',why:'It is prohibited. <b>Mustn\'t</b> = prohibition. <b>Don\'t have to</b> would mean it is not necessary, and here it is simply not allowed.'},
+{id:'a3',t:'mc',q:'You ___ wash your car every day. It is your choice.',o:['mustn\'t','don\'t have to','must'],a:'don\'t have to',why:'It is your choice, not an obligation. <b>Don\'t have to</b> = not necessary. <b>Mustn\'t</b> would mean prohibited, and washing your car is not prohibited.'},
+{id:'a4',t:'mc',q:'You ___ take a break if you feel tired on a long journey. It\'s a good idea.',o:['must','should','mustn\'t'],a:'should',why:'"It\'s a good idea" is advice, not a rule. For advice we use <b>should</b>.'},
+{id:'a5',t:'mc',q:'You ___ park in this zone for 30 minutes. It is completely free.',o:['can','mustn\'t','must'],a:'can',why:'It is permission: you are allowed to park for 30 minutes. For permission we use <b>can</b>.'},
+{id:'a6',t:'fill',q:'I think you ___ apologize to your friend.',a:['should','ought to'],why:'"I think you..." introduces advice. For advice: <b>should</b> or <b>ought to</b>.'},
+{id:'a7',t:'fill',q:'She ___ wake up at 6 AM every day for her new job.',a:['has to','must'],why:'It is an obligation from work. With she, <b>has to</b> (not "have to"). Must also works, but have to is more common for external obligations.'},
+{id:'a8',t:'fill',q:'We ___ buy any more milk. We already have three bottles in the fridge.',a:['don\'t have to','do not have to'],why:'There is no need to buy more, but it is not prohibited either. It is lack of necessity: <b>don\'t have to</b>, not mustn\'t.'},
+{id:'a9',t:'open',q:'Each sentence has ONE mistake. Rewrite both correctly.<br>1. He must to finish the project by tomorrow morning.<br>2. I think you ought see a doctor about your terrible backache.'}
+]},
+{id:'present',title:'Present Simple vs Continuous: jobs',tag:'Jobs',
+theory:`<p><b>Present Simple</b>: routines and facts. Key words: <i>always, usually, every day, on Tuesdays</i>. With he/she/it add -s: <i>She works full-time.</i></p>
+<p><b>Present Continuous</b>: what is happening <u>now</u> or something temporary. Key words: <i>right now, at the moment, today, this week, Look! Listen!</i> Form: am / is / are + verb with -ing. <i>I am sitting at my desk.</i></p>
+<p><b>Negative</b>: don't / doesn't (simple) vs aren't / isn't / am not (continuous).</p>
+<p>Stative verbs like <i>like, want, need, know</i> are almost never used in the continuous: <i>I like this job</i>, not "I'm liking".</p>`,
+items:[
+{id:'b1',t:'mc',q:'I ___ at my desk right now, reading some emails.',o:['sit','am sitting','sits'],a:'am sitting',why:'"Right now" marks an action at this moment: <b>Present Continuous</b> (am + sitting).'},
+{id:'b2',t:'mc',q:'She usually ___ full-time, but this week she is on holiday.',o:['works','is working','work'],a:'works',why:'"Usually" shows a routine: <b>Present Simple</b>. With she we add -s: works.'},
+{id:'b3',t:'mc',q:'My cousin is ___ a job at the moment because he needs money.',o:['looking','look for','looking for'],a:'looking for',why:'Look for is a verb with a preposition: the preposition stays. In the continuous it becomes <b>is looking for</b>.'},
+{id:'b4',t:'mc',q:'They ___ to work by train every day.',o:['commute','commutes','are commuting'],a:'commute',why:'"Every day" = routine, so <b>Present Simple</b>. With they there is no -s.'},
+{id:'b5',t:'mc',q:'We ___ to the office today because it\'s a holiday.',o:['don\'t go','aren\'t going','doesn\'t go'],a:'aren\'t going',why:'"Today" talks about this particular day: negative <b>Present Continuous</b>. And with we it is aren\'t, not doesn\'t.'},
+{id:'b6',t:'fill',q:'Look! The chef ___ (bake) a cake right now.',a:['is baking'],why:'"Look!" and "right now" call for <b>Present Continuous</b>: is + baking (the final e is dropped before -ing).'},
+{id:'b7',t:'fill',q:'The company ___ (pay) a good salary.',a:['pays'],why:'It is a general fact, not something happening now: <b>Present Simple</b>. With it/the company, pays.'},
+{id:'b8',t:'fill',q:'The candidates ___ (wait) in the reception area right now.',a:['are waiting'],why:'"Right now" + plural subject: <b>are waiting</b>.'},
+{id:'b9',t:'open',q:'Think about a job you would like to have. Write three sentences:<br>1. What do you do every day? (I usually...)<br>2. What are you doing right now at your job? (Right now, I am...)<br>3. What do you never do in this job? (I never...)'}
+]}];
+
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const norm=s=>String(s||'').toLowerCase().replace(/[’`]/g,"'").replace(/[.,!?]/g,'').replace(/\s+/g,' ').trim();
+const S={ans:{},subs:{},revs:{},drafts:{},ro:false,checked:{},tab:'act',open:null,db:null,owner:false,canWrite:true,local:false};
+const ok=(it,v)=>it.t==='mc'?v===it.a:it.a.some(x=>norm(x)===norm(v));
+
+function lsGet(k){try{return JSON.parse(localStorage.getItem(k)||'null')}catch(e){return null}}
+function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+
+function score(a){const sub=S.subs[a.id],rev=S.revs[a.id];let n=0,pend=0;
+ for(const it of a.items){const v=sub?.answers?.[it.id];
+  if(it.t==='open'){const m=rev?.m?.[it.id];if(m)n+=m.ok?1:0;else pend++}
+  else if(ok(it,v))n++}
+ return{n,total:a.items.length,pend}}
+function status(a){const s=S.subs[a.id];if(!s)return['Not started',0];return S.revs[a.id]?['Reviewed',2]:['Submitted',1]}
+
+function renderItem(a,it,i){
+ const v=(S.ans[a.id]||{})[it.id]??'';const chk=S.checked[a.id];const rev=S.revs[a.id]?.m?.[it.id];
+ let cls='ex',fb='';
+ if(chk){
+  if(it.t==='open'){
+   if(rev){cls+=rev.ok?' ok':' no';fb=`<div class="fb"><span class="${rev.ok?'good':'bad'}">${rev.ok?'Well done':'Needs review'}</span>${rev.n?' · '+esc(rev.n):''}</div>`}
+   else fb='<div class="fb">Submitted. Your teacher will review it.</div>'}
+  else if(ok(it,v)){cls+=' ok';fb='<div class="fb good">Correct!</div>'}
+  else{cls+=' no';fb=`<div class="fb bad">${v?'Not yet.':'You did not answer this one.'}</div><div class="why"><b>Why:</b> ${it.why}<br><small>Review the theory above and try again.</small></div>`}}
+ let body='';
+ if(it.t==='mc')body=it.o.map(o=>`<label class="opt"><input type="radio" name="${it.id}" value="${esc(o)}" ${v===o?'checked':''} data-q="${it.id}">${esc(o)}</label>`).join('');
+ else if(it.t==='fill')body='';
+ else body=`<textarea data-q="${it.id}" aria-label="Your answer">${esc(v)}</textarea>`;
+ const q=it.t==='fill'?esc(it.q).replace('___',`<input type="text" class="in" data-q="${it.id}" value="${esc(v)}" autocomplete="off" autocapitalize="off" aria-label="Answer">`):it.t==='mc'?esc(it.q):it.q;
+ return `<div class="${cls}"><p class="q">${i+1}. ${q}</p>${body}${fb}</div>`}
+
+function viewAct(a){
+ const [st]=status(a);const chk=S.checked[a.id];const sc=score(a);const rev=S.revs[a.id];
+ const hint=S.local?'<div class="note">Your answers are saved only on this device. Your teacher cannot see them from here yet.</div>':'';
+ return `<button class="s" id="back">← Back</button><h2 style="margin-top:14px">${esc(a.title)}</h2><p class="sub">${esc(a.tag)} · ${st}</p>${hint}
+ <details class="th" open><summary>Theory: read this before you start</summary><div class="b">${a.theory}</div></details>
+ ${a.items.map((it,i)=>renderItem(a,it,i)).join('')}
+ ${chk?`<div class="card"><div class="sc">${sc.n} / ${sc.total}</div><p style="margin:4px 0">${sc.pend?'Open questions are waiting for your teacher to review them.':'Fully reviewed.'}</p>${rev?.c?`<div class="why" style="border-color:var(--g)"><b>Message from your teacher:</b> ${esc(rev.c)}</div>`:''}</div>`:''}
+ <div class="row"><button class="p" id="send">${chk?'Check again and submit':'Check and submit'}</button></div>`}
+
+function viewList(){
+ return `<h2>Your activities</h2><p class="sub">Pick one, read the theory and complete the exercises.</p>`+ACTS.map(a=>{const[st,k]=status(a);const sc=score(a);
+ return `<div class="card act" data-open="${a.id}" tabindex="0" role="button"><div><h3 style="margin:0">${esc(a.title)}</h3><div style="color:var(--mut);font-size:14px">${esc(a.tag)} · ${a.items.length} exercises</div></div><span class="chip ${k===2?'ok':''}">${st}${k?' · '+sc.n+'/'+sc.total:''}</span></div>`}).join('')}
+
+function viewProg(){
+ const done=ACTS.filter(a=>S.subs[a.id]).length;
+ return `<h2>Progress</h2><p class="sub">${done} de ${ACTS.length} activities submitted.</p><div class="bar"><i style="width:${done/ACTS.length*100}%"></i></div>`+ACTS.map(a=>{const[st,k]=status(a);const sc=score(a);const r=S.revs[a.id];const s=S.subs[a.id];
+ return `<div class="card"><div class="row" style="justify-content:space-between;margin:0"><h3 style="margin:0">${esc(a.title)}</h3><span class="chip ${k===2?'ok':''}">${st}</span></div>${s?`<p style="margin:8px 0 0">Result: <b>${sc.n} / ${sc.total}</b>${sc.pend?` (${sc.pend} open questions not reviewed yet)`:''}<br><small style="color:var(--mut)">Submitted on ${new Date(s.at).toLocaleDateString('en-GB')}</small></p>`:'<p style="margin:8px 0 0;color:var(--mut)">Not submitted yet.</p>'}${r?.c?`<p class="why" style="border-color:var(--g)"><b>Feedback:</b> ${esc(r.c)}</p>`:''}</div>`}).join('')}
+
+function viewTeach(){
+ const subs=ACTS.filter(a=>S.subs[a.id]);
+ if(!subs.length)return '<h2>Review</h2><p class="sub">No activities have been submitted yet.</p>';
+ return '<h2>Review</h2><p class="sub">Mark the open answers and leave notes. Drafts are private: the student and her family only see what you publish.</p>'+subs.map(a=>{const s=S.subs[a.id],r=S.drafts[a.id]||S.revs[a.id]||{};const sc=score(a);
+ const opens=a.items.filter(i=>i.t==='open').map(it=>{const m=r.m?.[it.id]||{};
+  return `<div class="ex"><p class="q">${it.q}</p><p style="white-space:pre-wrap;margin:6px 0"><b>Answer:</b> ${esc(s.answers?.[it.id]||'(empty)')}</p>
+  <div class="row"><label><input type="radio" name="r-${a.id}-${it.id}" value="1" ${m.ok===true?'checked':''}> Good</label><label><input type="radio" name="r-${a.id}-${it.id}" value="0" ${m.ok===false?'checked':''}> Needs work</label></div>
+  <input type="text" data-n="${a.id}|${it.id}" placeholder="Note for her (optional)" value="${esc(m.n||'')}" style="margin-top:8px"></div>`}).join('');
+ return `<div class="card"><h3 style="margin-top:0">${esc(a.title)}</h3><p style="margin:0 0 8px">Automatic + reviewed: <b>${sc.n}/${sc.total}</b></p>${opens}
+ <textarea data-c="${a.id}" placeholder="General message for the student and her family (optional)">${esc(r.c||'')}</textarea><div class="row"><button class="s" data-save="${a.id}">Save draft (private)</button><button class="p" data-pub="${a.id}">Publish feedback</button></div></div>`}).join('')}
+
+const LOGO=n=>`<svg width="${n}" height="${n}" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 12Q24 7 28 4" fill="none" stroke="#5c6b3a" stroke-width="2.4" stroke-linecap="round"/><path d="M28 6C34 1 42 3 44 9C37 12 30 11 28 6Z" fill="#4a8a3a"/><g fill="#8fb85a" stroke="#4a6b2f" stroke-width="1.2"><circle cx="13" cy="18" r="6"/><circle cx="24" cy="18" r="6"/><circle cx="35" cy="18" r="6"/><circle cx="18.5" cy="26" r="6"/><circle cx="29.5" cy="26" r="6"/><circle cx="24" cy="34" r="6"/></g><g fill="#fff" opacity=".55"><circle cx="11" cy="16" r="1.7"/><circle cx="22" cy="16" r="1.7"/><circle cx="33" cy="16" r="1.7"/><circle cx="16.5" cy="24" r="1.7"/><circle cx="27.5" cy="24" r="1.7"/><circle cx="22" cy="32" r="1.7"/></g></svg>`;
+function render(){
+ const tabs=S.ro?[['prog','Progress']]:[['act','Activities'],['prog','Progress']];if(S.owner)tabs.push(['teach','Review']);
+ let body;
+ if(S.tab==='act')body=S.open?viewAct(ACTS.find(a=>a.id===S.open)):viewList();
+ else if(S.tab==='prog')body=viewProg();else body=viewTeach();
+ $('#top').innerHTML=`<div class="bar-in"><button class="brand" data-tab="act" aria-label="Home">${LOGO(40)}<span>English Corner</span></button><nav>${tabs.map(([k,l])=>`<button data-tab="${k}" class="${S.tab===k?'on':''}">${l}</button>`).join('')}</nav></div>`;
+ const hero=S.tab==='act'&&!S.open?`<section class="hero"><div><h1>Welcome to your English Corner</h1><p>Your practice for the weeks between classes: read the theory, complete the exercises and see how you are progressing.</p></div>${LOGO(96)}</section>`:'';
+ $('#app').innerHTML=hero+body}
+
+function setAns(q,v){const a=S.open;(S.ans[a]=S.ans[a]||{})[q]=v}
+document.addEventListener('input',e=>{const q=e.target.dataset?.q;if(q)setAns(q,e.target.value)});
+document.addEventListener('change',e=>{const q=e.target.dataset?.q;if(q)setAns(q,e.target.value)});
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.dataset?.open)S.open=e.target.dataset.open,render()});
+document.addEventListener('click',async e=>{
+ const t=e.target.closest('[data-tab],[data-open],#back,#send,[data-save],[data-pub]');if(!t)return;
+ if(t.dataset.tab){S.tab=t.dataset.tab;S.open=null;render();window.scrollTo(0,0)}
+ else if(t.dataset.open){S.open=t.dataset.open;render();window.scrollTo(0,0)}
+ else if(t.id==='back'){S.open=null;render()}
+ else if(t.id==='send'){const id=S.open;S.checked[id]=true;
+  const d={answers:S.ans[id]||{},at:Date.now()};S.subs[id]=d;lsSet('ec-sub-'+id,d);
+  if(S.db&&S.canWrite){try{await S.db.doc('subs/'+id).set(d);S.local=false}catch(err){S.local=true}}else S.local=true;
+  render();window.scrollTo(0,document.body.scrollHeight)}
+ else if(t.dataset.save||t.dataset.pub){const pub=!!t.dataset.pub,id=t.dataset.save||t.dataset.pub,r={m:{},c:$('[data-c="'+id+'"]').value};
+  ACTS.find(a=>a.id===id).items.filter(i=>i.t==='open').forEach(it=>{const rd=document.querySelector(`input[name="r-${id}-${it.id}"]:checked`);
+   const n=document.querySelector(`[data-n="${id}|${it.id}"]`).value;if(rd)r.m[it.id]={ok:rd.value==='1',n}});
+  S.drafts[id]=r;try{await S.db.doc('private/'+id).set(r);if(pub){await S.db.doc('reviews/'+id).set(r);S.revs[id]=r}t.textContent=pub?'Published ✓':'Draft saved ✓'}catch(err){t.textContent='Could not save'}}
+});
+
+function refresh(){const el=document.activeElement;if(S.tab==='teach'&&el&&/INPUT|TEXTAREA/.test(el.tagName))return;
+ if(S.open&&el&&/INPUT|TEXTAREA/.test(el.tagName))return;render()}
+
+(async()=>{
+ ACTS.forEach(a=>{const s=lsGet('ec-sub-'+a.id);if(s){S.subs[a.id]=s;S.ans[a.id]=s.answers;S.checked[a.id]=true}});
+ render();
+ try{
+  if(typeof claude==='undefined')throw 0;
+  const [db,user]=await Promise.all([claude.use('db'),claude.use('user')]);
+  if(!db)throw 0;S.db=db;
+  S.owner=user?await user.isOwner():false;
+  S.canWrite=user?(await user.can('data.write'))!==false:true;S.ro=!S.owner&&!S.canWrite;if(S.ro)S.tab='prog';if(S.owner)ACTS.forEach(a=>db.doc('private/'+a.id).onSnapshot(sn=>{if(sn.exists){S.drafts[a.id]=sn.data();refresh()}},()=>{}));
+  ACTS.forEach(a=>{
+   db.doc('subs/'+a.id).onSnapshot(sn=>{if(sn.exists){const d=sn.data();S.subs[a.id]=d;if(!S.ans[a.id]||!Object.keys(S.ans[a.id]).length){S.ans[a.id]=d.answers||{}}S.checked[a.id]=true;refresh()}},()=>{});
+   db.doc('reviews/'+a.id).onSnapshot(sn=>{if(sn.exists){S.revs[a.id]=sn.data();refresh()}},()=>{});
+  });
+  render();
+ }catch(e){S.local=true;render()}
+})();
+</script></body></html>
