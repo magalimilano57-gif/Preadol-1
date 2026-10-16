@@ -165,7 +165,7 @@ h2::after{content:"";display:block;width:48px;height:4px;border-radius:4px;backg
 .sec details.th{background:var(--st)}
 details.th .b{overflow-x:auto}
 details.th table{border-collapse:collapse;width:100%;margin:8px 0;font-size:16.33px}
-details.th th,details.th td{border:1px solid var(--line);padding:6px 10px;text-align:left;background:#fff;vertical-align:top}
+details.th th,details.th td{border:1px solid var(--line);padding:6px 10px;text-align:left;background:transparent;vertical-align:top}
 details.th th{background:var(--gl);color:var(--gd)}
 @media (max-width:560px){.sec-h{padding:12px 14px;gap:12px}.sec-n{width:42px;height:42px;font-size:21.33px}details.th table{font-size:15.33px}}
 
@@ -198,11 +198,11 @@ details.th summary{font-size:19.33px;display:flex;align-items:center;gap:10px}
 .th-l{flex:none;width:30px;height:30px;border-radius:50%;background:var(--sc,var(--g));color:#1d2a13;display:grid;place-items:center;font:800 16px Fredoka,sans-serif;box-shadow:0 0 0 2px #fff}
 details.th p{margin:8px 0;max-width:62ch}
 details.th ul{list-style:none;padding:0;margin:12px 0;display:grid;gap:10px}
-details.th li{--lc:var(--g);--lb:var(--gl);background:#fff;border:1px solid var(--line);border-left:6px solid var(--lc);border-radius:10px;padding:10px 14px}
-details.th li>b:first-child{display:inline-block;background:var(--lb);color:#27321f;border-radius:99px;padding:0 12px;margin-right:4px}
-.eg{font-style:italic;font-weight:700}
+details.th li{background:none;border:0;border-radius:0;padding:0 0 0 22px;position:relative}details.th li::before{content:"";position:absolute;left:4px;top:.62em;width:9px;height:9px;border-radius:50%;background:var(--g)}
+details.th li>b:first-child{background:linear-gradient(transparent 55%,var(--gl) 55%);color:var(--gd);padding:0 2px}
+.eg{font-style:italic;font-weight:600;color:var(--gd)}
 details.th .eg b{font-style:normal;background:var(--gl);border-radius:5px;padding:0 4px}
-details.th .th-fm{text-align:center;background:#fff;border:2px dashed var(--g);border-radius:14px;padding:12px;max-width:none;display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;justify-content:center}
+details.th .th-fm{text-align:center;background:none;border:0;padding:6px 0;max-width:none;display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;justify-content:center}
 .th-fm small{flex:0 0 100%;font:800 13px Fredoka,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
 .fm{border-radius:10px;padding:4px 12px;font:700 16px/1.3 Fredoka,Nunito,sans-serif;color:#1d2a13}.fm i{font-style:normal;opacity:.55;margin:0 2px}
 .f0,.f1,.f2{background:var(--gl);border:2px solid var(--g)}.fm-s{font:800 20px Fredoka,sans-serif;color:var(--gd)}
@@ -247,6 +247,19 @@ a.wa.big{font-size:19px;padding:13px 26px}
 .gc:not(.on):hover .gb{border-color:var(--gd)}
 @media (prefers-reduced-motion:no-preference){.gi{transition:transform .45s}.gc.done .gi{animation:gpop .5s}@keyframes gpop{50%{scale:1.08}}}
 @media (max-width:420px){.gboard{gap:7px}.gf svg{width:38px;height:38px}.gf span{font-size:12.5px}}
+/* pulido visual */
+.card,.ex,.sec-h{box-shadow:0 2px 10px rgba(74,107,47,.07)}
+.card{border-radius:18px}.ex{border-radius:14px;transition:box-shadow .2s,border-color .2s}
+.ex:focus-within{border-color:var(--g);box-shadow:0 4px 16px rgba(74,107,47,.14)}
+.opt{border-radius:10px;transition:background .15s,border-color .15s}.opt:hover{border-color:var(--g);background:#f7fbef}
+input[type=text],textarea{border-radius:10px;border:1.5px solid var(--line);transition:border-color .15s,box-shadow .15s}
+input[type=text]:focus,textarea:focus{outline:0;border-color:var(--g);box-shadow:0 0 0 3px rgba(143,184,90,.25)}
+button.p,a.wa{border-radius:99px;box-shadow:0 3px 0 #6f9a3c;transition:transform .12s,box-shadow .12s}
+button.p:hover,a.wa:hover{transform:translateY(-1px)}button.p:active,a.wa:active{transform:translateY(2px);box-shadow:0 1px 0 #6f9a3c}
+button.s{border-radius:99px}
+.top{background:rgba(255,255,255,.9);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.fb.good::before{content:"\2713  "}
+@media (prefers-reduced-motion:reduce){button.p,a.wa,.ex,.opt{transition:none}}
 </style></head>
 <body>
 <div class="deco" id="deco" aria-hidden="true">
@@ -437,16 +450,32 @@ const actTitle=id=>BLOCKS.find(b=>b.id===id)?.title||ACTS.find(a=>a.id===id)?.ti
 function upBtn(id,t){return `<button class="s" data-del="${esc(id)}" style="padding:2px 8px;font-size:14.33px">${t}</button>`}
 const WA='5491163667870';
 const plain=h=>String(h||'').replace(/<br\s*\/?>/gi,' ').replace(/<[^>]+>/g,'').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/\s+/g,' ').trim();
-function waMsg(b){const multi=b.acts.length>1,L=['Hi teacher! Here is my work: '+b.title,''];let N=0,T=0,P=0;
- b.acts.forEach(a=>{const sc=score(a);N+=sc.n;T+=sc.total;P+=sc.pend;
-  if(multi)L.push('— '+a.title+' —');
-  a.items.forEach((it,i)=>{const v=(S.ans[a.id]||{})[it.id]||'',n=(i+1)+'. ';
-   if(manual(it))L.push(n+'(open question) '+(v||'(no answer)'));
-   else if(grade(it,v).k==='typo')L.push(n+'✅ '+v+' (spelling: '+grade(it,v).fixes.map(f=>f[0]+' → '+f[1]).join(', ')+')');
-   else if(ok(it,v))L.push(n+'✅ '+v);
-   else L.push(n+'❌ '+(v||'(no answer)')+' → correct: '+(it.t==='mc'?it.a:[].concat(it.a)[0])+(multi?'':'\n    Why: '+plain(it.why)))});
-  if(multi)L.push('Section score: '+sc.n+'/'+sc.total+(sc.pend?' (+ '+sc.pend+' open to review)':''),'')});
- L.push('Total score: '+N+'/'+T+(P?' (+ '+P+' open to review)':''));return L.join('\n')}
+const wt=s=>String(s==null?'':s).replace(/[\u2018\u2019`]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/[\u2013\u2014]/g,'-').replace(/\uFFFD/g,'').replace(/\s+/g,' ').trim();
+// Mensaje para WhatsApp: solo texto ASCII + *negritas*, sin emojis (evita el caracter roto) y sin lineas en blanco de mas
+function waMsg(b){
+ const multi=b.acts.length>1;let N=0,T=0,P=0;const secs=[];
+ b.acts.forEach((a,si)=>{const sc=score(a);N+=sc.n;T+=sc.total;P+=sc.pend;
+  const okN=[],bad=[],typo=[],man=[],why=[];
+  a.items.forEach((it,i)=>{const k=i+1,v=wt((S.ans[a.id]||{})[it.id]),g=grade(it,v);
+   if(g.k==='manual')man.push(k+'. '+(v||'(no answer)'));
+   else if(g.k==='ok')okN.push(k);
+   else if(g.k==='typo'){okN.push(k);typo.push(k+'. '+g.fixes.map(f=>f[0]+' -> '+f[1]).join(', '))}
+   else{bad.push(k+'. '+(v||'(no answer)')+' -> '+wt(it.t==='mc'?it.a:[].concat(it.a)[0]));
+    let w=wt(plain(it.why)).replace(/\.$/,'').replace(/^(review|remember)\s+(the\s+)?/i,'');w=w.charAt(0).toUpperCase()+w.slice(1);if(w&&!why.includes(w))why.push(w)}});
+  const nm=multi?(si+1)+'. '+short(a.title):a.title;
+  const t=['*'+wt(nm)+'* ('+sc.n+'/'+sc.total+')'];
+  if(okN.length)t.push('Correct: '+okN.join(', '));
+  if(bad.length)t.push('Wrong:',...bad);
+  if(typo.length)t.push('Spelling:',...typo);
+  if(man.length)t.push('For you to review:',...man);
+  secs.push({a,sc,why,bad,t,nm})});
+ const L=['Hi teacher! Here is my homework: *'+wt(b.title)+'*','Score: *'+N+'/'+T+'*'+(P?' (+ '+P+' for you to review)':'')];
+ secs.forEach(s=>L.push('',...s.t));
+ const weak=secs.filter(s=>s.bad.length).sort((x,y)=>x.sc.n/x.sc.total-y.sc.n/y.sc.total);
+ if(weak.length){L.push('','*I need to review:*');
+  weak.forEach(s=>L.push('- '+(multi?wt(short(s.a.title))+' ('+s.sc.n+'/'+s.sc.total+')':'')+(multi&&s.why.length?': ':'')+s.why.slice(0,4).join('; ')+(s.why.length>4?'; +'+(s.why.length-4)+' more':'')))}
+ else if(!P)L.push('','I got everything right!');
+ return L.join('\n')}
 const waUrl=a=>'https://wa.me/'+WA+'?text='+encodeURIComponent(a?waMsg(a):'Hi teacher!');
 function waCard(a){return `<div class="card next" id="next"><span class="step">Next step</span><h3 style="margin-top:8px">Send your work to your teacher</h3><p style="margin:0 0 12px;color:var(--mut)">This opens WhatsApp with your answers already written. Just press send. Did something on paper? Attach the photo in the chat.</p><a class="wa big" data-wa="${a.id}" href="${waUrl(a)}" target="_blank" rel="noopener">Send to teacher</a></div>`}
 function uploadCard(a){
