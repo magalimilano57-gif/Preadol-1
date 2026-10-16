@@ -1,82 +1,5 @@
 [
   {
-    "id": "u6-revision-ex1",
-    "title": "Clothes & Materials",
-    "tag": "Vocabulary",
-    "block": "Unit 6: Revision",
-    "inst": "Read the descriptions and choose the correct material or complete the definitions.",
-    "theory": "<p><b>Materials</b></p>\n<ul>\n  <li><b>Vinyl:</b> A type of plastic. It is waterproof (water cannot pass through it). Some raincoats are made of vinyl.</li>\n  <li><b>Polyester:</b> A light, warm, and easy-to-clean plastic material. Good for sportswear and trousers.</li>\n  <li><b>Nylon:</b> A smooth and flexible material. Many tights are made of nylon.</li>\n  <li><b>Acrylic:</b> A light and cheap material. It is often mixed with wool to make warm hats, gloves, and scarves.</li>\n</ul>",
-    "items": [
-      {
-        "id": "u6e1q1",
-        "t": "mc",
-        "q": "1. Tights are made of this because it is smooth and flexible.",
-        "o": ["Vinyl", "Polyester", "Acrylic", "Nylon"],
-        "a": "Nylon",
-        "why": "Nylon is smooth and flexible."
-      },
-      {
-        "id": "u6e1q2",
-        "t": "mc",
-        "q": "2. It is cheap and mixed with wool for scarves and gloves.",
-        "o": ["Vinyl", "Polyester", "Acrylic", "Nylon"],
-        "a": "Acrylic",
-        "why": "Acrylic is often mixed with wool to make warm clothes."
-      },
-      {
-        "id": "u6e1q3",
-        "t": "mc",
-        "q": "3. Raincoats are made of this because it is waterproof.",
-        "o": ["Vinyl", "Polyester", "Acrylic", "Nylon"],
-        "a": "Vinyl",
-        "why": "Vinyl is waterproof, so water cannot pass through it."
-      },
-      {
-        "id": "u6e1q4",
-        "t": "mc",
-        "q": "4. It is warm, light, and easy to clean for sportswear.",
-        "o": ["Vinyl", "Polyester", "Acrylic", "Nylon"],
-        "a": "Polyester",
-        "why": "Polyester is light and easy to clean."
-      },
-      {
-        "id": "u6e1q5",
-        "t": "open",
-        "q": "5. If water cannot enter your jacket, your jacket is ___",
-        "why": "Review the definition of Vinyl.",
-        "a": ["waterproof"]
-      },
-      {
-        "id": "u6e1q6",
-        "t": "open",
-        "q": "6. Materials that bend easily without breaking are ___",
-        "why": "Review the properties of Nylon.",
-        "a": ["flexible"]
-      },
-      {
-        "id": "u6e1q7",
-        "t": "open",
-        "q": "7. Nylon tights feel very soft and ___",
-        "why": "Review the properties of Nylon.",
-        "a": ["smooth"]
-      },
-      {
-        "id": "u6e1q8",
-        "t": "open",
-        "q": "8. Acrylic is often mixed with ___ from sheep to make warm jumpers.",
-        "why": "Review the definition of Acrylic.",
-        "a": ["wool"]
-      },
-      {
-        "id": "u6e1q9",
-        "t": "open",
-        "q": "9. Polyester is a ___ material that is easy to wash.",
-        "why": "Review the definition of Polyester.",
-        "a": ["light"]
-      }
-    ]
-  },
-  {
     "id": "u6-revision-ex2",
     "title": "Present Continuous",
     "tag": "Grammar",
@@ -347,13 +270,6 @@
         "q": "5. Write the short answer (Affirmative): Are they watching a movie?",
         "why": "Answer using 'Yes' and the pronoun they.",
         "a": ["Yes, they are."]
-      },
-      {
-        "id": "u6e5q6",
-        "t": "open",
-        "q": "6. Complete: Raincoats are made of vinyl because vinyl is ___",
-        "why": "Think about the material property.",
-        "a": ["waterproof"]
       }
     ]
   }
