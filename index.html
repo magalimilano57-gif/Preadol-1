@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="color-scheme" content="light">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>English Corner Preadol 1</title>
+<title>English Corner</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400..700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -90,6 +90,9 @@ h2::after{content:"";display:block;width:48px;height:4px;border-radius:4px;backg
 .deco .d1{left:-34px;bottom:-34px}
 .deco .d2{right:-44px;top:96px;transform:scaleX(-1)}
 .deco .d3{right:18px;bottom:14px;opacity:.5}
+.deco .d4{left:14px;top:46%;opacity:.3}
+.deco .d5{right:16px;top:58%;opacity:.3;transform:rotate(18deg)}
+@media (max-width:700px){.deco .d4,.deco .d5{display:none}}
 @media (max-width:700px){.deco .d1,.deco .d2{width:130px;height:130px}.deco .d3{display:none}}
 
 /* hero */
@@ -185,6 +188,33 @@ details.th th{background:var(--gl);color:var(--gd)}
 .tw,.tr{font-weight:700;white-space:nowrap}.tw{color:var(--no)}.tr{color:var(--ok)}
 u.tx{text-decoration:none;border-radius:3px;padding:0 2px;font-weight:800}.tw u.tx{background:#f3c9bd}.tr u.tx{background:#cfe8c3}
 
+/* teoría más fácil de leer */
+details.th{font-size:16.5px;line-height:1.6;border:2px solid var(--sc,var(--g))}
+details.th summary{font-size:19.33px;display:flex;align-items:center;gap:10px}
+.th-ic svg{width:24px;height:24px;display:block}
+.th-say{margin:2px 0 6px}
+.th-h{display:flex;align-items:center;gap:10px;margin:18px 0 8px;font-size:19px;color:var(--gd);line-height:1.25}
+.th-h small{display:block;font:600 13.5px Fredoka,Nunito,sans-serif;color:var(--mut)}
+.th-l{flex:none;width:30px;height:30px;border-radius:50%;background:var(--sc,var(--g));color:#1d2a13;display:grid;place-items:center;font:800 16px Fredoka,sans-serif;box-shadow:0 0 0 2px #fff}
+details.th p{margin:8px 0;max-width:62ch}
+details.th ul{list-style:none;padding:0;margin:12px 0;display:grid;gap:10px}
+details.th li{--lc:var(--g);--lb:var(--gl);background:#fff;border:1px solid var(--line);border-left:6px solid var(--lc);border-radius:10px;padding:10px 14px}
+details.th li>b:first-child{display:inline-block;background:var(--lb);color:#27321f;border-radius:99px;padding:0 12px;margin-right:4px}
+.eg{font-style:italic;font-weight:700}
+details.th .eg b{font-style:normal;background:var(--gl);border-radius:5px;padding:0 4px}
+details.th .th-fm{text-align:center;background:#fff;border:2px dashed var(--g);border-radius:14px;padding:12px;max-width:none;display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;justify-content:center}
+.th-fm small{flex:0 0 100%;font:800 13px Fredoka,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.fm{border-radius:10px;padding:4px 12px;font:700 16px/1.3 Fredoka,Nunito,sans-serif;color:#1d2a13}.fm i{font-style:normal;opacity:.55;margin:0 2px}
+.f0,.f1,.f2{background:var(--gl);border:2px solid var(--g)}.fm-s{font:800 20px Fredoka,sans-serif;color:var(--gd)}
+details.th .th-warn{background:#fdf3da;border-left:6px solid #c8962b;border-radius:10px;padding:10px 14px;max-width:none}
+details.th table{font-size:15.5px;line-height:1.5}
+.mx{color:var(--no);font-weight:800;font-size:1.2em}
+/* siguiente paso */
+.card.next{border:3px solid var(--g);background:linear-gradient(135deg,var(--gl),var(--card));margin-top:6px}
+.step{display:inline-block;background:var(--g);color:#1d2a13;border-radius:99px;padding:3px 14px;font:800 14px Fredoka,Nunito,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.step::before{content:"\2193  "}
+.nxt-h{margin:0 0 12px;color:var(--mut);font-weight:700}
+a.wa.big{font-size:19px;padding:13px 26px}
 /* barra de progreso de sección */
 .sprog{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:var(--st,#eaf3d9);border:2px solid var(--sc,#8fb85a);border-radius:99px;padding:9px 20px 9px 18px;margin-bottom:12px;position:sticky;top:calc(var(--hh,64px) + env(safe-area-inset-top,0px) + 6px);z-index:10;box-shadow:0 -6px 0 var(--bg),0 6px 14px rgba(74,107,47,.14)}
 .sp-l{font:800 14.33px Fredoka,Nunito,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--gd)}
@@ -223,6 +253,8 @@ u.tx{text-decoration:none;border-radius:3px;padding:0 2px;font-weight:800}.tw u.
  <svg class="d1" viewBox="0 0 200 200" width="200" height="200"><defs><path id="lf" d="M0 0C6-14 22-18 36-12C32 4 16 12 0 0Z"/></defs><path d="M0 200C40 150 70 90 130 40" fill="none" stroke="#5c6b3a" stroke-width="3" stroke-linecap="round"/><g fill="#8fb85a"><use href="#lf" transform="translate(18,172) rotate(-120)"/><use href="#lf" transform="translate(22,168) rotate(-20)"/><use href="#lf" transform="translate(44,138) rotate(-130)"/><use href="#lf" transform="translate(48,134) rotate(-30)"/><use href="#lf" transform="translate(72,104) rotate(-135)"/><use href="#lf" transform="translate(76,100) rotate(-40)"/><use href="#lf" transform="translate(102,74) rotate(-140)"/><use href="#lf" transform="translate(106,70) rotate(-50)"/><use href="#lf" transform="translate(128,44) rotate(-60)"/></g></svg>
  <svg class="d2" viewBox="0 0 200 200" width="170" height="170"><path d="M0 200C40 150 70 90 130 40" fill="none" stroke="#5c6b3a" stroke-width="3" stroke-linecap="round"/><g fill="#8fb85a"><use href="#lf" transform="translate(30,158) rotate(-125)"/><use href="#lf" transform="translate(34,154) rotate(-25)"/><use href="#lf" transform="translate(70,106) rotate(-135)"/><use href="#lf" transform="translate(74,102) rotate(-40)"/><use href="#lf" transform="translate(110,64) rotate(-140)"/><use href="#lf" transform="translate(114,60) rotate(-55)"/></g></svg>
  <svg class="d3" viewBox="0 0 90 90" width="90" height="90"><path d="M45 18Q45 10 52 6" fill="none" stroke="#5c6b3a" stroke-width="3" stroke-linecap="round"/><path d="M50 9C58 2 70 5 72 14C62 18 53 16 50 9Z" fill="#4a8a3a"/><g fill="#8fb85a" stroke="#4a6b2f" stroke-width="1.5"><circle cx="28" cy="32" r="10"/><circle cx="45" cy="32" r="10"/><circle cx="62" cy="32" r="10"/><circle cx="36" cy="48" r="10"/><circle cx="54" cy="48" r="10"/><circle cx="45" cy="64" r="10"/></g></svg>
+ <svg class="d4" viewBox="0 0 90 90" width="62" height="62"><path d="M45 18Q45 10 52 6" fill="none" stroke="#5c6b3a" stroke-width="3" stroke-linecap="round"/><path d="M50 9C58 2 70 5 72 14C62 18 53 16 50 9Z" fill="#4a8a3a"/><g fill="#8fb85a" stroke="#4a6b2f" stroke-width="1.5"><circle cx="36" cy="34" r="10"/><circle cx="54" cy="34" r="10"/><circle cx="45" cy="50" r="10"/></g></svg>
+ <svg class="d5" viewBox="0 0 60 60" width="54" height="54"><path d="M8 52C8 26 26 8 52 8c0 26-18 44-44 44Z" fill="#8fb85a" stroke="#5c6b3a" stroke-width="2" stroke-linejoin="round"/><path d="M8 52L36 24" stroke="#5c6b3a" stroke-width="2" stroke-linecap="round"/></svg>
 </div>
 <header class="top" id="top"></header><main id="app"></main><footer class="ft">English Corner · Practice between classes</footer>
 <script>
@@ -315,7 +347,7 @@ function renderItem(a,it,i){
    else fb='<div class="fb">Submitted. Your teacher will review it.</div>'}
   else if(grade(it,v).k==='ok'){cls+=' ok';fb='<div class="fb good">Correct!</div>'}
   else if(grade(it,v).k==='typo'){const g=grade(it,v);cls+=' typo';fb=`<div class="fb good">Correct!</div><div class="tn"><b>Watch your spelling:</b> ${typoHTML(g.fixes)}</div>`}
-  else{cls+=' no';fb=`<div class="fb bad">${v?'Not yet.':'You did not answer this one.'}</div><div class="why"><b>Why:</b> ${it.why}<br><small>Review the theory above and try again.</small></div>`}}
+  else{cls+=' no';fb=`<div class="fb bad">${v?'Almost there! Keep going, you can do it.':'You did not answer this one.'}</div><div class="why"><b>Why:</b> ${it.why}<br><small>Review the theory above and try again.</small></div>`}}
  let body='';
  if(it.t==='mc')body=it.o.map(o=>`<label class="opt"><input type="radio" name="${it.id}" value="${esc(o)}" ${v===o?'checked':''} data-q="${it.id}" data-a="${a.id}">${esc(o)}</label>`).join('');
  else if(it.t==='fill')body='';
@@ -340,18 +372,36 @@ function updProg(aid){const a=ACTS.find(x=>x.id===aid);if(!a)return;
  document.querySelectorAll('.sprog[data-a="'+aid+'"]').forEach(el=>{const n=ansN(a),t=a.items.length,p=t?Math.round(n/t*100):0;
   el.dataset.p=p;el.setAttribute('aria-valuenow',n);el.classList.toggle('full',n===t&&t>0);
   el.querySelector('.sp-fill').style.width=p+'%';el.querySelector('.sp-c').innerHTML='<b>'+n+'</b> / '+t})}
+// ---- Teoría fácil de leer: títulos, fórmulas, ejemplos y avisos con color ----
+function qfy(h){const n=(h.replace(/<[^>]*>/g,'').match(/"/g)||[]).length;if(!n||n%2)return h;let o=false;
+ return h.split(/(<[^>]*>)/).map(x=>x[0]==='<'?x:x.replace(/"/g,()=>(o=!o)?'<span class="eg">“':'”</span>')).join('')}
+function fmtTheory(h){const d=document.createElement('div');d.innerHTML=h;
+ d.querySelectorAll('p').forEach(p=>{const t=p.textContent.trim(),f=p.firstElementChild,bold=f&&f.tagName==='B';
+  if(bold&&p.children.length===1&&f.textContent.trim()===t){const m=t.match(/^([A-Z])\.\s+(.*)$/),r=(m?m[2]:t).match(/^(.*?)\s*(\([^)]*\))?$/),e=document.createElement('h4');
+   e.className='th-h';e.innerHTML=`<span>${esc(r[1])}${r[2]?`<small>${esc(r[2])}</small>`:''}</span>`;p.replaceWith(e)}
+  else if(bold&&/^structure:/i.test(t)){const c=t.replace(/^structure:\s*/i,'').split(',').map(x=>x.replace(/^\s*\.{3}\s*/,'').trim()).filter(Boolean);
+   p.className='th-fm';p.removeAttribute('style');p.innerHTML='<small>Structure</small>'+c.map((x,i)=>`<span class="fm f${i%3}">${esc(x).replace(/ \+ /g,' <i>+</i> ')}</span>`).join('<span class="fm-s">,</span>')}
+  else if(bold&&/^(watch out|careful|remember|note|tip)/i.test(t))p.classList.add('th-warn')});
+ d.querySelectorAll('p,li,td').forEach(e=>{e.innerHTML=qfy(e.innerHTML)});
+ d.querySelectorAll('td').forEach(e=>{e.innerHTML=e.innerHTML.replace(/✗/g,'<span class="mx">✗</span>')});
+ d.querySelectorAll('table').forEach(t=>{if(t.textContent.includes('✗'))t.classList.add('fix')});
+ return d.innerHTML}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-say]');if(!b||!('speechSynthesis' in window))return;const ss=speechSynthesis;
+ if(ss.speaking){ss.cancel();b.textContent='▶ Listen';return}
+ const u=new SpeechSynthesisUtterance(b.parentElement.querySelector('.th-body').textContent.replace(/✗/g,'wrong').replace(/\s+/g,' '));u.lang='en-US';u.rate=.9;
+ u.onend=u.onerror=()=>{b.textContent='▶ Listen'};b.textContent='■ Stop';ss.speak(u)});
 function viewAct(b){
  const [st]=blockStatus(b);const multi=b.acts.length>1;const chk=b.acts.every(a=>S.checked[a.id]);const sc=blockScore(b);
  const hint=S.local?'<div class="note">Your answers are saved only on this device. When you finish, use the button at the end to send them to your teacher on WhatsApp.</div>':'';
  const jump=multi?`<div class="jump"><span>Jump to:</span>${b.acts.map((a,i)=>{const c=SECC[i%SECC.length];return `<a href="#sec-${i}" style="--sc:${c[0]};--st:${c[1]}"><b>${i+1}</b> ${esc(short(a.title))}</a>`}).join('')}</div>`:'';
  const secs=b.acts.map((a,i)=>{const c=SECC[i%SECC.length];const s1=score(a);const ck=S.checked[a.id];
   const head=multi?`<div class="sec-h"><span class="sec-n">${i+1}</span><div><span class="chip">${esc(a.tag)} · ${a.items.length} exercises</span><h3>${esc(short(a.title))}</h3>${a.inst?`<p class="sec-inst">${esc(a.inst)}</p>`:''}</div></div>`:(a.inst?`<div class="note">${esc(a.inst)}</div>`:'');
-  const theory=a.theory?`<details class="th" open><summary>Theory: read this before you start</summary><div class="b">${a.theory}</div></details>`:'';
+  const theory=a.theory?`<details class="th" open><summary><span class="th-ic">${IC.book}</span>Theory: read this before you start</summary><div class="b"><div class="th-body">${fmtTheory(a.theory)}</div></div></details>`:'';
   const res=ck&&multi?`<div class="card sec-res"><b>Section ${i+1} result:</b> ${s1.n} / ${s1.total}${s1.pend?` · ${s1.pend} open questions waiting for your teacher`:''}</div>`:'';
   return `${i?`<div class="sep">${LOGO(26)}</div>`:''}<section class="sec" id="sec-${i}" style="--sc:${c[0]};--st:${c[1]}">${progHTML(a,i)}${head}${theory}${a.items.map((it,j)=>renderItem(a,it,j)).join('')}${res}</section>`}).join('');
  const msgs=b.acts.filter(a=>S.revs[a.id]?.c).map(a=>`<div class="why" style="border-color:var(--g)"><b>Message from your teacher${multi?' ('+esc(short(a.title))+')':''}:</b> ${esc(S.revs[a.id].c)}</div>`).join('');
  const tc=typoCount(b);const sum=chk?`<div class="card" id="sum" style="scroll-margin-top:100px"><div class="sc">${sc.n} /${sc.total}</div><p style="margin:4px 0">${sc.pend?'Reflection questions are waiting for your teacher.':'Everything is checked.'}</p>${tc?`<p style="margin:4px 0">${tc} answer${tc>1?'s were':' was'} counted as correct, but with a spelling slip. Look for the orange notes.</p>`:''}${msgs}</div>`:'';
- return `<button class="s" id="back">← Back</button><h2 style="margin-top:14px">${esc(b.title)}</h2><p class="sub">${esc(b.tag)} · ${st}</p>${hint}${jump}${secs}<div class="sep">${LOGO(26)}</div>${sum}${chk?waCard(b):''}<div class="row" style="margin:0 0 12px"><button class="p" id="send">${chk?'Check again and submit':'Check and submit'}</button></div>${uploadCard({id:b.id})}`}
+ return `<button class="s" id="back">← Back</button><h2 style="margin-top:14px">${esc(b.title)}</h2><p class="sub">${esc(b.tag)} · ${st}</p>${hint}${jump}${secs}<div class="sep">${LOGO(26)}</div>${sum}<div class="row" style="margin:0 0 12px"><button class="p" id="send">${chk?'Check again and submit':'Check and submit'}</button></div>${chk?waCard(b):'<p class="nxt-h">After checking, the next step is to send your work to your teacher.</p>'}`}
 
 function viewList(){
  if(!ACTS.length)return `<h2 id="acts">Your activities</h2><div class="card empty"><span class="big">${LOGO(88)}</span><h3 style="margin:0 0 6px">No activities yet</h3><p style="margin:0;color:var(--mut)">Your next activity will show up here. See you after the next class!</p></div>`;
@@ -398,11 +448,11 @@ function waMsg(b){const multi=b.acts.length>1,L=['Hi teacher! Here is my work: '
   if(multi)L.push('Section score: '+sc.n+'/'+sc.total+(sc.pend?' (+ '+sc.pend+' open to review)':''),'')});
  L.push('Total score: '+N+'/'+T+(P?' (+ '+P+' open to review)':''));return L.join('\n')}
 const waUrl=a=>'https://wa.me/'+WA+'?text='+encodeURIComponent(a?waMsg(a):'Hi teacher!');
-function waCard(a){return `<div class="card"><h3 style="margin-top:0">Send your work to your teacher</h3><p style="margin:0 0 12px;color:var(--mut)">This opens WhatsApp with your answers and corrections already written. Just press send. If you did anything on paper, attach the photo in the chat.</p><a class="wa" data-wa="${a.id}" href="${waUrl(a)}" target="_blank" rel="noopener">Send by WhatsApp</a></div>`}
+function waCard(a){return `<div class="card next" id="next"><span class="step">Next step</span><h3 style="margin-top:8px">Send your work to your teacher</h3><p style="margin:0 0 12px;color:var(--mut)">This opens WhatsApp with your answers already written. Just press send. Did something on paper? Attach the photo in the chat.</p><a class="wa big" data-wa="${a.id}" href="${waUrl(a)}" target="_blank" rel="noopener">Send to teacher</a></div>`}
 function uploadCard(a){
- const mine=S.ups.filter(u=>u.act===a.id&&okImg(u.img));
+ const mine=S.ups.filter(u=>(a.id==='general'||u.act===a.id)&&okImg(u.img));
  const list=mine.length?`<div class="ups" style="margin-top:12px">${mine.map(u=>`<figure class="up"><img src="${u.img}" data-view="${esc(u.id)}" alt="Your uploaded work"><figcaption><span>${new Date(u.at).toLocaleDateString('en-GB')}</span>${upBtn(u.id,'Remove')}</figcaption></figure>`).join('')}</div>`:'';
- return `<div class="card"><h3 style="margin-top:0">Upload your work</h3>`+(S.db&&S.canWrite?`<p style="margin:0 0 10px;color:var(--mut)">Did it on paper? Take a photo and upload it here. Your teacher will see it.</p><input type="file" id="up" accept="image/*" multiple data-act="${a.id}"><div class="fb" id="upmsg" role="status"></div>${list}`:`<p style="margin:0;color:var(--mut)">To send a photo of your work, open WhatsApp and attach it in the chat.</p><a class="wa" href="${waUrl(null)}" target="_blank" rel="noopener" style="margin-top:10px">Open WhatsApp</a>`)+`</div>`}
+ return `<div class="card"><h3 style="margin-top:0">${S.db&&S.canWrite?'Upload your work':'Send a photo on WhatsApp'}</h3>`+(S.db&&S.canWrite?`<p style="margin:0 0 10px;color:var(--mut)">Did it on paper? Take a photo and upload it here. Your teacher will see it.</p><input type="file" id="up" accept="image/*" multiple data-act="${a.id}"><div class="fb" id="upmsg" role="status"></div>${list}`:`<p style="margin:0;color:var(--mut)">To send a photo of your work, open WhatsApp and attach it in the chat.</p><a class="wa" href="${waUrl(null)}" target="_blank" rel="noopener" style="margin-top:10px">Open WhatsApp</a>`)+`</div>`}
 function viewUps(){const l=S.ups.filter(u=>okImg(u.img));if(!l.length)return '';
  return `<h3 style="margin-top:0">Uploaded work (${l.length})</h3><div class="ups" style="margin-bottom:24px">${l.map(u=>`<figure class="up"><img src="${u.img}" data-view="${esc(u.id)}" alt="Uploaded work"><figcaption><span>${esc(actTitle(u.act))} · ${new Date(u.at).toLocaleDateString('en-GB')}</span>${upBtn(u.id,'Delete')}</figcaption></figure>`).join('')}</div>`}
 const LOGO=n=>{const G=[[12,19],[24,19],[36,19],[18,27.5],[30,27.5],[24,36]];
@@ -448,10 +498,10 @@ document.addEventListener('click',e=>{
    $('#gwin').innerHTML=`<div class="pmsg ok">${LOGO(36)}<div><b>Well done!</b> You found all the pairs in ${G.moves} moves. Time to go back to the exercises when you are ready.</div></div>`}},350);
  else setTimeout(()=>{gFlip(ea,false);gFlip(eb,false);G.open=[];G.lock=false},900)});
 function render(){buildBlocks();
- const tabs=S.ro?[['prog','Progress']]:[['act','Activities'],['up','My work'],['prog','Progress'],['game','Break']];if(S.owner)tabs.push(['teach','Review']);
+ const tabs=S.ro?[['prog','Progress']]:[['act','Activities'],['up','Send paper work'],['prog','Progress'],['game','Break']];if(S.owner)tabs.push(['teach','Review']);
  let body;
  if(S.tab==='act')body=S.open&&BLOCKS.find(b=>b.id===S.open)?viewAct(BLOCKS.find(b=>b.id===S.open)):viewList();
- else if(S.tab==='prog')body=viewProg();else if(S.tab==='game')body=viewGame();else if(S.tab==='up')body='<h2>My work</h2><p class="sub">Upload photos of anything you did on paper.</p>'+uploadCard({id:'general'});else body=viewTeach();
+ else if(S.tab==='prog')body=viewProg();else if(S.tab==='game')body=viewGame();else if(S.tab==='up')body='<h2>Send your paper work</h2><p class="sub">Did your homework by hand? Take a photo and send it to your teacher.</p>'+uploadCard({id:'general'});else body=viewTeach();
  $('#top').innerHTML=`<div class="bar-in"><button class="brand" data-tab="act" aria-label="Home">${LOGO(40)}<span>English Corner</span></button><nav>${tabs.map(([k,l])=>`<button data-tab="${k}" class="${S.tab===k?'on':''}">${l}</button>`).join('')}</nav></div>`;
  const hero=S.tab==='act'&&!S.open?heroHTML()+featHTML():'';
  $('#app').innerHTML=hero+body;setHH()}
