@@ -5,6 +5,8 @@
     "tag": "Unit 6 - Vocabulary",
     "block": "Unit 6: Revision and Practice",
     "inst": "Read the clues and write the correct clothes.",
+    "img": "clothes.jpg",
+    "imgAlt": "Picture of clothes with their names: basketball cap, boots, cardigan, coat, dress, hoodie, jacket, jeans, jumper, sandals, shirt, shoes, shorts, skirt, socks, top, tracksuit, trainers, T shirt.",
     "items": [
       {
         "id": "u6e1q1",
@@ -47,6 +49,7 @@
         "t": "fill",
         "q": "5. You wear this on your head on sunny days to protect your eyes (starts with B and C): ___",
         "a": [
+          "basketball cap",
           "baseball cap"
         ],
         "why": "Clothes vocabulary"
@@ -54,7 +57,7 @@
       {
         "id": "u6e1q6",
         "t": "fill",
-        "q": "6. A girl can wear this one-piece outfit to a party in the summer (starts with D): ___",
+        "q": "6. You can wear this one-piece outfit to a party in the summer (starts with D): ___",
         "a": [
           "dress"
         ],

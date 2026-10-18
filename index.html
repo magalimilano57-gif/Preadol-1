@@ -260,6 +260,7 @@ button.s{border-radius:99px}
 .top{background:rgba(255,255,255,.9);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 .fb.good::before{content:"\2713  "}
 @media (prefers-reduced-motion:reduce){button.p,a.wa,.ex,.opt{transition:none}}
+.act-img{margin:12px 0;text-align:center}.act-img img{max-width:100%;height:auto;border-radius:14px;border:2px solid var(--line);background:#fff;box-shadow:0 2px 10px rgba(74,107,47,.07)}.act-img figcaption{font-size:14px;color:var(--mut);margin-top:4px}
 </style></head>
 <body>
 <div class="deco" id="deco" aria-hidden="true">
@@ -411,7 +412,7 @@ function viewAct(b){
   const head=multi?`<div class="sec-h"><span class="sec-n">${i+1}</span><div><span class="chip">${esc(a.tag)} · ${a.items.length} exercises</span><h3>${esc(short(a.title))}</h3>${a.inst?`<p class="sec-inst">${esc(a.inst)}</p>`:''}</div></div>`:(a.inst?`<div class="note">${esc(a.inst)}</div>`:'');
   const theory=a.theory?`<details class="th" open><summary><span class="th-ic">${IC.book}</span>Theory: read this before you start</summary><div class="b"><div class="th-body">${fmtTheory(a.theory)}</div></div></details>`:'';
   const res=ck&&multi?`<div class="card sec-res"><b>Section ${i+1} result:</b> ${s1.n} / ${s1.total}${s1.pend?` · ${s1.pend} open questions waiting for your teacher`:''}</div>`:'';
-  return `${i?`<div class="sep">${LOGO(26)}</div>`:''}<section class="sec" id="sec-${i}" style="--sc:${c[0]};--st:${c[1]}">${progHTML(a,i)}${head}${theory}${a.items.map((it,j)=>renderItem(a,it,j)).join('')}${res}</section>`}).join('');
+  return `${i?`<div class="sep">${LOGO(26)}</div>`:''}<section class="sec" id="sec-${i}" style="--sc:${c[0]};--st:${c[1]}">${progHTML(a,i)}${head}${theory}${a.img?`<figure class="act-img"><a href="${esc(a.img)}" target="_blank" rel="noopener"><img src="${esc(a.img)}" alt="${esc(a.imgAlt||'')}" loading="lazy"></a><figcaption>Tap the picture to see it bigger.</figcaption></figure>`:''}${a.items.map((it,j)=>renderItem(a,it,j)).join('')}${res}</section>`}).join('');
  const msgs=b.acts.filter(a=>S.revs[a.id]?.c).map(a=>`<div class="why" style="border-color:var(--g)"><b>Message from your teacher${multi?' ('+esc(short(a.title))+')':''}:</b> ${esc(S.revs[a.id].c)}</div>`).join('');
  const tc=typoCount(b);const sum=chk?`<div class="card" id="sum" style="scroll-margin-top:100px"><div class="sc">${sc.n} /${sc.total}</div><p style="margin:4px 0">${sc.pend?'Reflection questions are waiting for your teacher.':'Everything is checked.'}</p>${tc?`<p style="margin:4px 0">${tc} answer${tc>1?'s were':' was'} counted as correct, but with a spelling slip. Look for the orange notes.</p>`:''}${msgs}</div>`:'';
  return `<button class="s" id="back">← Back</button><h2 style="margin-top:14px">${esc(b.title)}</h2><p class="sub">${esc(b.tag)} · ${st}</p>${hint}${jump}${secs}<div class="sep">${LOGO(26)}</div>${sum}<div class="row" style="margin:0 0 12px"><button class="p" id="send">${chk?'Check again and submit':'Check and submit'}</button></div>${chk?waCard(b):'<p class="nxt-h">After checking, the next step is to send your work to your teacher.</p>'}`}
