@@ -314,13 +314,13 @@
     "title": "Questions and Short Answers",
     "tag": "Unit 6 - Grammar",
     "block": "Unit 6: Revision and Practice",
-    "inst": "Write the questions and the short answers. Use the prompts and the Yes / No in brackets.",
+    "inst": "For each prompt, write a question. Then write the short answer to that question: Yes (✔) or No (✖).",
     "theory": "<p><b>Questions and Short Answers</b></p>\n<p>Put <b>Am / Is / Are</b> before the person to make a question:</p>\n<ul>\n  <li><b>I:</b> <i>Am I running?</i> → <i>Yes, I am. / No, I'm not.</i></li>\n  <li><b>He / She / It:</b> <i>Is he / she / it running?</i> → <i>Yes, he is. / No, he isn't.</i></li>\n  <li><b>We / You / They:</b> <i>Are we / you / they running?</i> → <i>Yes, they are. / No, they aren't.</i></li>\n</ul>",
     "items": [
       {
         "id": "u6e5q1",
         "t": "open",
-        "q": "1. Write the question: Sarah and Oliver / wear / jeans?",
+        "q": "1. Write the question: Sarah and Oliver / wear / jeans",
         "a": [
           "Are Sarah and Oliver wearing jeans?"
         ],
@@ -329,7 +329,7 @@
       {
         "id": "u6e5q2",
         "t": "open",
-        "q": "2. Write the short answer (Yes): Sarah and Oliver / wear / jeans?",
+        "q": "2. Now write the short answer to question 1: Yes (✔)",
         "a": [
           "Yes, they are."
         ],
@@ -338,7 +338,7 @@
       {
         "id": "u6e5q3",
         "t": "open",
-        "q": "3. Write the question: Dad / watch / TV?",
+        "q": "3. Write the question: Dad / watch / TV",
         "a": [
           "Is Dad watching TV?"
         ],
@@ -347,7 +347,7 @@
       {
         "id": "u6e5q4",
         "t": "open",
-        "q": "4. Write the short answer (Yes): Dad / watch / TV?",
+        "q": "4. Now write the short answer to question 3: Yes (✔)",
         "a": [
           "Yes, he is."
         ],
@@ -356,7 +356,7 @@
       {
         "id": "u6e5q5",
         "t": "open",
-        "q": "5. Write the question: Sarah / read / a book?",
+        "q": "5. Write the question: Sarah / read / a book",
         "a": [
           "Is Sarah reading a book?"
         ],
@@ -365,7 +365,7 @@
       {
         "id": "u6e5q6",
         "t": "open",
-        "q": "6. Write the short answer (No): Sarah / read / a book?",
+        "q": "6. Now write the short answer to question 5: No (✖)",
         "a": [
           "No, she isn't.",
           "No, she's not.",
@@ -376,7 +376,7 @@
       {
         "id": "u6e5q7",
         "t": "open",
-        "q": "7. Write the question: The cat / sleep / on the chair?",
+        "q": "7. Write the question: The cat / sleep / on the chair",
         "a": [
           "Is the cat sleeping on the chair?"
         ],
@@ -385,7 +385,7 @@
       {
         "id": "u6e5q8",
         "t": "open",
-        "q": "8. Write the short answer (Yes): The cat / sleep / on the chair?",
+        "q": "8. Now write the short answer to question 7: Yes (✔)",
         "a": [
           "Yes, it is."
         ],
@@ -394,7 +394,7 @@
       {
         "id": "u6e5q9",
         "t": "open",
-        "q": "9. Write the question: Mum and Sarah / wear / glasses?",
+        "q": "9. Write the question: Mum and Sarah / wear / glasses",
         "a": [
           "Are Mum and Sarah wearing glasses?"
         ],
@@ -403,7 +403,7 @@
       {
         "id": "u6e5q10",
         "t": "open",
-        "q": "10. Write the short answer (No): Mum and Sarah / wear / glasses?",
+        "q": "10. Now write the short answer to question 9: No (✖)",
         "a": [
           "No, they aren't.",
           "No, they're not.",
@@ -555,13 +555,53 @@
     "title": "Shopping: Clothes Shop Dialogue",
     "tag": "Unit 6 - Dialogue",
     "block": "Unit 6: Revision and Practice",
-    "inst": "Complete the dialogue in the clothes shop. Choose the correct phrase.",
+    "inst": "Complete the dialogue in the clothes shop. Read the dialogue, then choose the correct phrase for each gap.",
+    "dialogue": {
+      "lines": [
+        [
+          "Shop Assistant",
+          "Good morning! {1}?"
+        ],
+        [
+          "Customer",
+          "Yes, please. I am looking for some black trousers."
+        ],
+        [
+          "Shop Assistant",
+          "{2}?"
+        ],
+        [
+          "Customer",
+          "I'm a medium. {3}?"
+        ],
+        [
+          "Shop Assistant",
+          "Of course. The changing rooms are over there."
+        ],
+        [
+          "",
+          "(After two minutes)"
+        ],
+        [
+          "Customer",
+          "They fit very well. {4}?"
+        ],
+        [
+          "Shop Assistant",
+          "They are £25.00. How are you paying?"
+        ],
+        [
+          "Customer",
+          "I am paying {5}. Thank you!"
+        ]
+      ]
+    },
     "theory": "<p><b>Shopping for Clothes</b></p>\n<ul>\n  <li><b>Shop Assistant:</b> <i>Can I help you?</i> / <i>What size are you?</i> (Small / Medium / Large) / <i>How are you paying?</i> (With cash / by card)</li>\n  <li><b>Customer:</b> <i>I'm looking for (some trousers / a jacket).</i> / <i>Can I try it / them on?</i> / <i>How much is it / are they?</i> / <i>I'll take it / them.</i></li>\n</ul>",
     "items": [
       {
         "id": "u6e8q1",
         "t": "mc",
-        "q": "1. Shop Assistant: Good morning! ___",
+        "q": "1. Which phrase goes in gap 1?",
         "o": [
           "Can I help you?",
           "What size are you?",
@@ -575,7 +615,7 @@
       {
         "id": "u6e8q2",
         "t": "mc",
-        "q": "2. Shop Assistant: ___",
+        "q": "2. Which phrase goes in gap 2?",
         "o": [
           "Can I help you?",
           "What size are you?",
@@ -589,7 +629,7 @@
       {
         "id": "u6e8q3",
         "t": "mc",
-        "q": "3. Customer: I'm a medium. ___",
+        "q": "3. Which phrase goes in gap 3?",
         "o": [
           "Can I help you?",
           "What size are you?",
@@ -603,7 +643,7 @@
       {
         "id": "u6e8q4",
         "t": "mc",
-        "q": "4. Customer: They fit very well. ___",
+        "q": "4. Which phrase goes in gap 4?",
         "o": [
           "Can I help you?",
           "What size are you?",
@@ -617,7 +657,7 @@
       {
         "id": "u6e8q5",
         "t": "mc",
-        "q": "5. Customer: I am paying ___. Thank you!",
+        "q": "5. Which phrase goes in gap 5?",
         "o": [
           "Can I help you?",
           "What size are you?",
