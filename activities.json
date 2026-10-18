@@ -1,279 +1,690 @@
 [
   {
-    "id": "u6-revision-ex2",
-    "title": "Present Continuous",
-    "tag": "Grammar",
-    "block": "Unit 6: Revision",
-    "inst": "Complete the sentences in Present Continuous and correct the mistakes.",
-    "theory": "<p><b>Present Continuous - Affirmative & Negative</b></p>\n<ul>\n  <li><b>Affirmative (+):</b> Subject + am / is / are + Verb with -ing (e.g., <i>I am sleeping. He is sleeping. They are sleeping.</i>)</li>\n  <li><b>Negative (-):</b> Subject + 'm not / isn't / aren't + Verb with -ing (e.g., <i>I'm not sleeping. She isn't sleeping. We aren't sleeping.</i>)</li>\n</ul>\n<p><b>Spelling Rules for -ing:</b></p>\n<ul>\n  <li>Most verbs: wear &rarr; wearing, help &rarr; helping.</li>\n  <li>Verbs ending in -e (delete the -e): make &rarr; making, dance &rarr; dancing.</li>\n  <li>One-syllable verbs with consonant-vowel-consonant (double the final letter): run &rarr; running, stop &rarr; stopping.</li>\n</ul>",
+    "id": "u6-ex1",
+    "title": "Clothes",
+    "tag": "Unit 6 - Vocabulary",
+    "block": "Unit 6: Revision and Practice",
+    "inst": "Read the clues and write the correct clothes.",
+    "items": [
+      {
+        "id": "u6e1q1",
+        "t": "fill",
+        "q": "1. You wear them on your legs when it is cold, but they are made of blue denim (starts with J): ___",
+        "a": [
+          "jeans"
+        ],
+        "why": "Clothes vocabulary"
+      },
+      {
+        "id": "u6e1q2",
+        "t": "fill",
+        "q": "2. When you do sports or run in PE class, you wear these on your feet (starts with T): ___",
+        "a": [
+          "trainers"
+        ],
+        "why": "Clothes vocabulary"
+      },
+      {
+        "id": "u6e1q3",
+        "t": "fill",
+        "q": "3. It has a hood to cover your head when it rains or is windy (starts with H): ___",
+        "a": [
+          "hoodie"
+        ],
+        "why": "Clothes vocabulary"
+      },
+      {
+        "id": "u6e1q4",
+        "t": "fill",
+        "q": "4. You wear these open shoes on the beach when it is very hot (starts with S): ___",
+        "a": [
+          "sandals"
+        ],
+        "why": "Clothes vocabulary"
+      },
+      {
+        "id": "u6e1q5",
+        "t": "fill",
+        "q": "5. You wear this on your head on sunny days to protect your eyes (starts with B and C): ___",
+        "a": [
+          "baseball cap"
+        ],
+        "why": "Clothes vocabulary"
+      },
+      {
+        "id": "u6e1q6",
+        "t": "fill",
+        "q": "6. A girl can wear this one-piece outfit to a party in the summer (starts with D): ___",
+        "a": [
+          "dress"
+        ],
+        "why": "Clothes vocabulary"
+      },
+      {
+        "id": "u6e1q7",
+        "t": "fill",
+        "q": "7. You wear these inside your shoes to keep your feet warm (starts with S): ___",
+        "a": [
+          "socks"
+        ],
+        "why": "Clothes vocabulary"
+      },
+      {
+        "id": "u6e1q8",
+        "t": "fill",
+        "q": "8. A complete two-piece sports outfit (jacket + trousers) for exercising (starts with T): ___",
+        "a": [
+          "tracksuit"
+        ],
+        "why": "Clothes vocabulary"
+      }
+    ]
+  },
+  {
+    "id": "u6-ex2",
+    "title": "Summer vs. Winter Clothes",
+    "tag": "Unit 6 - Vocabulary",
+    "block": "Unit 6: Revision and Practice",
+    "inst": "Is each clothing item for summer or for winter? Choose the correct category.",
     "items": [
       {
         "id": "u6e2q1",
-        "t": "open",
-        "q": "1. Ray ___ (wear) a warm jacket today. (+)",
-        "why": "Use 'is' for he/she/it and add -ing.",
-        "a": ["is wearing", "'s wearing"]
+        "t": "mc",
+        "q": "1. Sandals are...",
+        "o": [
+          "summer clothes",
+          "winter clothes"
+        ],
+        "a": "summer clothes",
+        "why": "Summer and winter clothes"
       },
       {
         "id": "u6e2q2",
-        "t": "open",
-        "q": "2. Hop and Bee ___ (not wait) for the bus. (-)",
-        "why": "Use 'aren't' for plural subjects.",
-        "a": ["aren't waiting", "are not waiting"]
+        "t": "mc",
+        "q": "2. A hoodie is...",
+        "o": [
+          "summer clothes",
+          "winter clothes"
+        ],
+        "a": "winter clothes",
+        "why": "Summer and winter clothes"
       },
       {
         "id": "u6e2q3",
-        "t": "open",
-        "q": "3. We ___ (prepare) our clothes for school. (+)",
-        "why": "Use 'are' for we/you/they and delete the -e in prepare.",
-        "a": ["are preparing", "'re preparing"]
+        "t": "mc",
+        "q": "3. Boots are...",
+        "o": [
+          "summer clothes",
+          "winter clothes"
+        ],
+        "a": "winter clothes",
+        "why": "Summer and winter clothes"
       },
       {
         "id": "u6e2q4",
-        "t": "open",
-        "q": "4. Look! The boy ___ (run) in the race. (+)",
-        "why": "Double the consonant for short C-V-C verbs (run -> running).",
-        "a": ["is running", "'s running"]
+        "t": "mc",
+        "q": "4. A baseball cap is...",
+        "o": [
+          "summer clothes",
+          "winter clothes"
+        ],
+        "a": "summer clothes",
+        "why": "Summer and winter clothes"
       },
       {
         "id": "u6e2q5",
-        "t": "open",
-        "q": "5. I ___ (not sleep) right now because I am awake. (-)",
-        "why": "Use 'am not' with I.",
-        "a": ["am not sleeping", "'m not sleeping"]
+        "t": "mc",
+        "q": "5. A coat is...",
+        "o": [
+          "summer clothes",
+          "winter clothes"
+        ],
+        "a": "winter clothes",
+        "why": "Summer and winter clothes"
       },
       {
         "id": "u6e2q6",
-        "t": "open",
-        "q": "6. She ___ (make) a dress out of paper. (+)",
-        "why": "Delete the -e in make.",
-        "a": ["is making", "'s making"]
+        "t": "mc",
+        "q": "6. Shorts are...",
+        "o": [
+          "summer clothes",
+          "winter clothes"
+        ],
+        "a": "summer clothes",
+        "why": "Summer and winter clothes"
       },
       {
         "id": "u6e2q7",
-        "t": "open",
-        "q": "7. Correct the mistake: She wearing a blue hoodie today.",
-        "why": "Remember to include the verb to be.",
-        "a": ["She is wearing a blue hoodie today.", "She's wearing a blue hoodie today."]
+        "t": "mc",
+        "q": "7. A scarf is...",
+        "o": [
+          "summer clothes",
+          "winter clothes"
+        ],
+        "a": "winter clothes",
+        "why": "Summer and winter clothes"
       },
       {
         "id": "u6e2q8",
-        "t": "open",
-        "q": "8. Correct the mistake: They isn't running together.",
-        "why": "Use 'aren't' for plural subjects.",
-        "a": ["They aren't running together.", "They are not running together."]
-      },
-      {
-        "id": "u6e2q9",
-        "t": "open",
-        "q": "9. Correct the mistake: We are makeing clothes from plastic.",
-        "why": "Delete the -e before adding -ing.",
-        "a": ["We are making clothes from plastic.", "We're making clothes from plastic."]
-      },
-      {
-        "id": "u6e2q10",
-        "t": "open",
-        "q": "10. Correct the mistake: I aren't doing my English homework.",
-        "why": "Use 'am not' for I.",
-        "a": ["I am not doing my English homework.", "I'm not doing my English homework."]
+        "t": "mc",
+        "q": "8. A swimsuit is...",
+        "o": [
+          "summer clothes",
+          "winter clothes"
+        ],
+        "a": "summer clothes",
+        "why": "Summer and winter clothes"
       }
     ]
   },
   {
-    "id": "u6-revision-ex3",
-    "title": "Questions, Short Answers & Reasons",
-    "tag": "Grammar",
-    "block": "Unit 6: Revision",
-    "inst": "Write questions and short answers. Then, choose the correct reason.",
-    "theory": "<p><b>Questions & Short Answers</b></p>\n<ul>\n  <li>Put Am / Is / Are before the person to make a question.</li>\n  <li><i>Is she running? Yes, she is. / No, she isn't.</i></li>\n  <li><i>Are they running? Yes, they are. / No, they aren't.</i></li>\n</ul>\n<p><b>\"Why...?\" and \"Because...\"</b></p>\n<ul>\n  <li><b>Why</b> asks for a reason (question).</li>\n  <li><b>Because</b> gives the reason (answer).</li>\n  <li><i>Example: Why are you running? Because I'm late!</i></li>\n</ul>",
+    "id": "u6-ex3",
+    "title": "Present Continuous: Complete the Sentences",
+    "tag": "Unit 6 - Grammar",
+    "block": "Unit 6: Revision and Practice",
+    "inst": "Complete the sentences with the Present Continuous (+ or -).",
+    "theory": "<p><b>Present Continuous: Affirmative and Negative</b></p>\n<p style=\"text-align:center;\"><b>Structure:</b> Subject + am / is / are + Verb with -ing</p>\n<ul>\n  <li><b>Affirmative (+):</b> <i>I <b>am</b> sleeping.</i> / <i>He / She / It <b>is</b> sleeping.</i> / <i>We / You / They <b>are</b> sleeping.</i></li>\n  <li><b>Negative (-):</b> <i>I<b>'m not</b> sleeping.</i> / <i>He / She / It <b>isn't</b> sleeping.</i> / <i>We / You / They <b>aren't</b> sleeping.</i></li>\n</ul>\n<p><b>Spelling Rules for -ing</b></p>\n<ul>\n  <li><b>Most verbs:</b> <i>wear → <b>wearing</b>, help → <b>helping</b></i></li>\n  <li><b>Verbs ending in -e:</b> delete the -e: <i>make → <b>making</b>, dance → <b>dancing</b></i></li>\n  <li><b>One-syllable verbs with consonant-vowel-consonant:</b> double the final letter: <i>run → <b>running</b>, stop → <b>stopping</b></i></li>\n</ul>",
     "items": [
       {
         "id": "u6e3q1",
-        "t": "open",
-        "q": "1. Write the question AND short answer (Negative): Sarah and Oliver / wear / jeans?",
-        "why": "Use 'Are' for plural subjects. Answer with 'they'.",
-        "a": ["Are Sarah and Oliver wearing jeans? No, they aren't.", "Are Sarah and Oliver wearing jeans? No, they are not."]
+        "t": "fill",
+        "q": "1. Ray ___ (wear) a warm jacket today.",
+        "a": [
+          "is wearing",
+          "'s wearing"
+        ],
+        "why": "Present Continuous affirmative (is + verb-ing)"
       },
       {
         "id": "u6e3q2",
-        "t": "open",
-        "q": "2. Write the question AND short answer (Negative): Dad / watch / TV?",
-        "why": "Use 'Is' for singular subjects. Answer with 'he'.",
-        "a": ["Is Dad watching TV? No, he isn't.", "Is Dad watching TV? No, he is not."]
+        "t": "fill",
+        "q": "2. Hop and Bee ___ (not wait) for the bus.",
+        "a": [
+          "aren't waiting",
+          "are not waiting"
+        ],
+        "why": "Present Continuous negative (aren't + verb-ing)"
       },
       {
         "id": "u6e3q3",
-        "t": "open",
-        "q": "3. Write the question AND short answer (Affirmative): Sarah / read / a book?",
-        "why": "Use 'Is' for singular subjects. Answer with 'she'.",
-        "a": ["Is Sarah reading a book? Yes, she is."]
+        "t": "fill",
+        "q": "3. We ___ (prepare) our clothes for school.",
+        "a": [
+          "are preparing",
+          "'re preparing"
+        ],
+        "why": "Present Continuous affirmative (are + verb-ing)"
       },
       {
         "id": "u6e3q4",
-        "t": "open",
-        "q": "4. Write the question AND short answer (Negative): The cat / sleep / on the chair?",
-        "why": "Use 'Is' for singular subjects. Answer with 'it'.",
-        "a": ["Is the cat sleeping on the chair? No, it isn't.", "Is the cat sleeping on the chair? No, it is not."]
+        "t": "fill",
+        "q": "4. Look! The boy ___ (run) in the race.",
+        "a": [
+          "is running",
+          "'s running"
+        ],
+        "why": "-ing spelling: double the final letter (run - running)"
       },
       {
         "id": "u6e3q5",
-        "t": "mc",
-        "q": "5. Why are you wearing pajamas?",
-        "o": ["Because it's my mum's birthday.", "Because I am going to bed.", "Because it is raining!", "Because it is the weekend!"],
-        "a": "Because I am going to bed.",
-        "why": "Pajamas are clothes for sleeping."
+        "t": "fill",
+        "q": "5. I ___ (not sleep) right now because I am awake.",
+        "a": [
+          "am not sleeping",
+          "'m not sleeping"
+        ],
+        "why": "Present Continuous negative (I'm not + verb-ing)"
       },
       {
         "id": "u6e3q6",
-        "t": "mc",
-        "q": "6. Why are you making a cake?",
-        "o": ["Because it's my mum's birthday.", "Because I am going to bed.", "Because it is raining!", "Because it is the weekend!"],
-        "a": "Because it's my mum's birthday.",
-        "why": "Cakes are typical for birthdays."
+        "t": "fill",
+        "q": "6. She ___ (make) a dress out of paper.",
+        "a": [
+          "is making",
+          "'s making"
+        ],
+        "why": "-ing spelling: delete the -e (make - making)"
       },
       {
         "id": "u6e3q7",
-        "t": "open",
-        "q": "7. ___ are you running so fast?",
-        "why": "Use the question word for asking a reason.",
-        "a": ["Why"]
-      },
-      {
-        "id": "u6e3q8",
-        "t": "open",
-        "q": "8. ___ I am late for my class!",
-        "why": "Use the word to give a reason.",
-        "a": ["Because"]
+        "t": "fill",
+        "q": "7. The students ___ (not pack) their bags yet.",
+        "a": [
+          "aren't packing",
+          "are not packing"
+        ],
+        "why": "Present Continuous negative (aren't + verb-ing)"
       }
     ]
   },
   {
-    "id": "u6-revision-ex4",
-    "title": "Shopping For Clothes & Vocabulary",
-    "tag": "Vocabulary",
-    "block": "Unit 6: Revision",
-    "inst": "Complete the shopping dialogue and the vocabulary definitions.",
-    "theory": "<p><b>Shopping Vocabulary:</b></p>\n<ul>\n  <li><b>Shop Assistant:</b> Can I help you? / What size are you? (Small, Medium, Large) / How are you paying? (With cash / by card)</li>\n  <li><b>Customer:</b> I'm looking for... / Can I try it on? / How much is it? / I'll take it.</li>\n</ul>",
+    "id": "u6-ex4",
+    "title": "Present Continuous: Correct the Mistake",
+    "tag": "Unit 6 - Grammar",
+    "block": "Unit 6: Revision and Practice",
+    "inst": "Find the mistake in each sentence and write the correct sentence.",
     "items": [
       {
         "id": "u6e4q1",
-        "t": "mc",
-        "q": "1. Shop Assistant: Good morning! ___ (Customer: Yes, please. I am looking for some black trousers).",
-        "o": ["What size are you?", "Can I help you?", "Can I try them on?"],
-        "a": "Can I help you?",
-        "why": "This is how a shop assistant greets a customer."
+        "t": "open",
+        "q": "1. She wearing a blue hoodie today.",
+        "a": [
+          "She is wearing a blue hoodie today.",
+          "She's wearing a blue hoodie today."
+        ],
+        "why": "Present Continuous needs am / is / are before the -ing verb"
       },
       {
         "id": "u6e4q2",
-        "t": "mc",
-        "q": "2. Shop Assistant: ___? (Customer: I'm a medium.)",
-        "o": ["What size are you?", "How are you paying?", "How much are they?"],
-        "a": "What size are you?",
-        "why": "The assistant needs to know the size before finding the trousers."
+        "t": "open",
+        "q": "2. They isn't running together.",
+        "a": [
+          "They aren't running together.",
+          "They are not running together."
+        ],
+        "why": "Negative with They: aren't + verb-ing"
       },
       {
         "id": "u6e4q3",
-        "t": "mc",
-        "q": "3. Customer: ___? (Shop Assistant: Of course. The changing rooms are over there.)",
-        "o": ["How much are they?", "Can I help you?", "Can I try them on?"],
-        "a": "Can I try them on?",
-        "why": "The customer wants to put the trousers on to see if they fit."
+        "t": "open",
+        "q": "3. We are makeing clothes from plastic.",
+        "a": [
+          "We are making clothes from plastic.",
+          "We're making clothes from plastic."
+        ],
+        "why": "-ing spelling: delete the -e (make - making)"
       },
       {
         "id": "u6e4q4",
-        "t": "mc",
-        "q": "4. Customer: They fit very well. ___? (Shop Assistant: They are £25.00.)",
-        "o": ["Can I try them on?", "What size are you?", "How much are they?"],
-        "a": "How much are they?",
-        "why": "The customer is asking for the price."
-      },
-      {
-        "id": "u6e4q5",
-        "t": "mc",
-        "q": "5. Shop Assistant: How are you paying? Customer: I am paying ___",
-        "o": ["by card", "a medium", "second-hand"],
-        "a": "by card",
-        "why": "This is a method of payment."
-      },
-      {
-        "id": "u6e4q6",
-        "t": "mc",
-        "q": "6. Definition: Clothes that were owned and worn by someone else before:",
-        "o": ["second-hand", "charity shop", "designer"],
-        "a": "second-hand",
-        "why": "Used clothing is called second-hand."
-      },
-      {
-        "id": "u6e4q7",
-        "t": "mc",
-        "q": "7. Definition: A shop that sells used items to get money for people who need help:",
-        "o": ["review", "second-hand", "charity shop"],
-        "a": "charity shop",
-        "why": "A charity shop helps raise money for people in need."
-      },
-      {
-        "id": "u6e4q8",
-        "t": "mc",
-        "q": "8. Definition: A person whose job is to create and draw new styles of clothing:",
-        "o": ["designer", "second-hand", "review"],
-        "a": "designer",
-        "why": "A designer creates new clothing styles."
-      },
-      {
-        "id": "u6e4q9",
-        "t": "mc",
-        "q": "9. Definition: An opinion that someone writes online about a product:",
-        "o": ["charity shop", "review", "designer"],
-        "a": "review",
-        "why": "When people buy online, they leave a review."
+        "t": "open",
+        "q": "4. I aren't doing my English homework.",
+        "a": [
+          "I'm not doing my English homework.",
+          "I am not doing my English homework."
+        ],
+        "why": "Negative with I: I'm not + verb-ing"
       }
     ]
   },
   {
-    "id": "u6-revision-ex5",
-    "title": "Final Revision",
-    "tag": "Grammar & Vocab",
-    "block": "Unit 6: Revision",
-    "inst": "A quick check of everything from Unit 6.",
-    "theory": "<p><b>Final Review</b></p><p>Let's check everything we've practiced!</p>",
+    "id": "u6-ex5",
+    "title": "Questions and Short Answers",
+    "tag": "Unit 6 - Grammar",
+    "block": "Unit 6: Revision and Practice",
+    "inst": "Write the questions and the short answers. Use the prompts and the Yes / No in brackets.",
+    "theory": "<p><b>Questions and Short Answers</b></p>\n<p>Put <b>Am / Is / Are</b> before the person to make a question:</p>\n<ul>\n  <li><b>I:</b> <i>Am I running?</i> → <i>Yes, I am. / No, I'm not.</i></li>\n  <li><b>He / She / It:</b> <i>Is he / she / it running?</i> → <i>Yes, he is. / No, he isn't.</i></li>\n  <li><b>We / You / They:</b> <i>Are we / you / they running?</i> → <i>Yes, they are. / No, they aren't.</i></li>\n</ul>",
     "items": [
       {
         "id": "u6e5q1",
-        "t": "mc",
-        "q": "1. Oliver ___ tennis right now.",
-        "o": ["is playing", "are playing", "play"],
-        "a": "is playing",
-        "why": "Oliver is singular (he), so we use 'is'."
+        "t": "open",
+        "q": "1. Write the question: Sarah and Oliver / wear / jeans?",
+        "a": [
+          "Are Sarah and Oliver wearing jeans?"
+        ],
+        "why": "Questions: Am / Is / Are before the person"
       },
       {
         "id": "u6e5q2",
-        "t": "mc",
-        "q": "2. We ___ wearing sandals today.",
-        "o": ["isn't", "aren't", "not are"],
-        "a": "aren't",
-        "why": "We use 'aren't' for the pronoun 'We'."
+        "t": "open",
+        "q": "2. Write the short answer (Yes): Sarah and Oliver / wear / jeans?",
+        "a": [
+          "Yes, they are."
+        ],
+        "why": "Short answers: Yes, he is. / No, he isn't."
       },
       {
         "id": "u6e5q3",
-        "t": "mc",
-        "q": "3. ___ doing your homework?",
-        "o": ["Are you", "You are", "Do you"],
-        "a": "Are you",
-        "why": "In a present continuous question, the verb 'to be' goes before the subject."
+        "t": "open",
+        "q": "3. Write the question: Dad / watch / TV?",
+        "a": [
+          "Is Dad watching TV?"
+        ],
+        "why": "Questions: Am / Is / Are before the person"
       },
       {
         "id": "u6e5q4",
         "t": "open",
-        "q": "4. Write the short answer (Negative): Is Mum cooking dinner?",
-        "why": "Answer using 'No' and the correct pronoun for Mum.",
-        "a": ["No, she isn't.", "No, she is not."]
+        "q": "4. Write the short answer (Yes): Dad / watch / TV?",
+        "a": [
+          "Yes, he is."
+        ],
+        "why": "Short answers: Yes, he is. / No, he isn't."
       },
       {
         "id": "u6e5q5",
         "t": "open",
-        "q": "5. Write the short answer (Affirmative): Are they watching a movie?",
-        "why": "Answer using 'Yes' and the pronoun they.",
-        "a": ["Yes, they are."]
+        "q": "5. Write the question: Sarah / read / a book?",
+        "a": [
+          "Is Sarah reading a book?"
+        ],
+        "why": "Questions: Am / Is / Are before the person"
+      },
+      {
+        "id": "u6e5q6",
+        "t": "open",
+        "q": "6. Write the short answer (No): Sarah / read / a book?",
+        "a": [
+          "No, she isn't.",
+          "No, she's not.",
+          "No, she is not."
+        ],
+        "why": "Short answers: Yes, he is. / No, he isn't."
+      },
+      {
+        "id": "u6e5q7",
+        "t": "open",
+        "q": "7. Write the question: The cat / sleep / on the chair?",
+        "a": [
+          "Is the cat sleeping on the chair?"
+        ],
+        "why": "Questions: Am / Is / Are before the person"
+      },
+      {
+        "id": "u6e5q8",
+        "t": "open",
+        "q": "8. Write the short answer (Yes): The cat / sleep / on the chair?",
+        "a": [
+          "Yes, it is."
+        ],
+        "why": "Short answers: Yes, he is. / No, he isn't."
+      },
+      {
+        "id": "u6e5q9",
+        "t": "open",
+        "q": "9. Write the question: Mum and Sarah / wear / glasses?",
+        "a": [
+          "Are Mum and Sarah wearing glasses?"
+        ],
+        "why": "Questions: Am / Is / Are before the person"
+      },
+      {
+        "id": "u6e5q10",
+        "t": "open",
+        "q": "10. Write the short answer (No): Mum and Sarah / wear / glasses?",
+        "a": [
+          "No, they aren't.",
+          "No, they're not.",
+          "No, they are not."
+        ],
+        "why": "Short answers: Yes, he is. / No, he isn't."
+      }
+    ]
+  },
+  {
+    "id": "u6-ex6",
+    "title": "Why and Because: Match",
+    "tag": "Unit 6 - Grammar",
+    "block": "Unit 6: Revision and Practice",
+    "inst": "Match each question with its answer.",
+    "theory": "<p><b>\"Why...?\" and \"Because...\"</b></p>\n<ul>\n  <li><b>Why</b> asks for a reason (question).</li>\n  <li><b>Because</b> gives the reason (answer).</li>\n  <li><b>Example:</b> <i>— Why are you running?</i> / <i>— Because I'm late for dinner!</i></li>\n</ul>",
+    "items": [
+      {
+        "id": "u6e6q1",
+        "t": "mc",
+        "q": "1. Why are you wearing pajamas?",
+        "o": [
+          "A. Because it's my mum's birthday.",
+          "B. Because I am going to bed.",
+          "C. Because it is raining!",
+          "D. Because it is the weekend!"
+        ],
+        "a": "B. Because I am going to bed.",
+        "why": "Why asks for a reason; Because gives the reason"
+      },
+      {
+        "id": "u6e6q2",
+        "t": "mc",
+        "q": "2. Why are you making a cake?",
+        "o": [
+          "A. Because it's my mum's birthday.",
+          "B. Because I am going to bed.",
+          "C. Because it is raining!",
+          "D. Because it is the weekend!"
+        ],
+        "a": "A. Because it's my mum's birthday.",
+        "why": "Why asks for a reason; Because gives the reason"
+      },
+      {
+        "id": "u6e6q3",
+        "t": "mc",
+        "q": "3. Why aren't you studying?",
+        "o": [
+          "A. Because it's my mum's birthday.",
+          "B. Because I am going to bed.",
+          "C. Because it is raining!",
+          "D. Because it is the weekend!"
+        ],
+        "a": "D. Because it is the weekend!",
+        "why": "Why asks for a reason; Because gives the reason"
+      },
+      {
+        "id": "u6e6q4",
+        "t": "mc",
+        "q": "4. Why are you wearing a raincoat?",
+        "o": [
+          "A. Because it's my mum's birthday.",
+          "B. Because I am going to bed.",
+          "C. Because it is raining!",
+          "D. Because it is the weekend!"
+        ],
+        "a": "C. Because it is raining!",
+        "why": "Why asks for a reason; Because gives the reason"
+      }
+    ]
+  },
+  {
+    "id": "u6-ex7",
+    "title": "Why and Because: Complete",
+    "tag": "Unit 6 - Grammar",
+    "block": "Unit 6: Revision and Practice",
+    "inst": "Complete with \"Why\" or \"Because\".",
+    "items": [
+      {
+        "id": "u6e7q1",
+        "t": "mc",
+        "q": "1. ___ are you running so fast?",
+        "o": [
+          "Why",
+          "Because"
+        ],
+        "a": "Why",
+        "why": "Why asks for a reason; Because gives the reason"
+      },
+      {
+        "id": "u6e7q2",
+        "t": "mc",
+        "q": "2. ___ I am late for my class!",
+        "o": [
+          "Why",
+          "Because"
+        ],
+        "a": "Because",
+        "why": "Why asks for a reason; Because gives the reason"
+      },
+      {
+        "id": "u6e7q3",
+        "t": "mc",
+        "q": "3. ___ is he wearing boots?",
+        "o": [
+          "Why",
+          "Because"
+        ],
+        "a": "Why",
+        "why": "Why asks for a reason; Because gives the reason"
+      },
+      {
+        "id": "u6e7q4",
+        "t": "mc",
+        "q": "4. ___ it is cold and snowy today.",
+        "o": [
+          "Why",
+          "Because"
+        ],
+        "a": "Because",
+        "why": "Why asks for a reason; Because gives the reason"
+      },
+      {
+        "id": "u6e7q5",
+        "t": "mc",
+        "q": "5. ___ are they looking at stamps?",
+        "o": [
+          "Why",
+          "Because"
+        ],
+        "a": "Why",
+        "why": "Why asks for a reason; Because gives the reason"
+      },
+      {
+        "id": "u6e7q6",
+        "t": "mc",
+        "q": "6. ___ they want to start a collection.",
+        "o": [
+          "Why",
+          "Because"
+        ],
+        "a": "Because",
+        "why": "Why asks for a reason; Because gives the reason"
+      }
+    ]
+  },
+  {
+    "id": "u6-ex8",
+    "title": "Shopping: Clothes Shop Dialogue",
+    "tag": "Unit 6 - Dialogue",
+    "block": "Unit 6: Revision and Practice",
+    "inst": "Complete the dialogue in the clothes shop. Choose the correct phrase.",
+    "theory": "<p><b>Shopping for Clothes</b></p>\n<ul>\n  <li><b>Shop Assistant:</b> <i>Can I help you?</i> / <i>What size are you?</i> (Small / Medium / Large) / <i>How are you paying?</i> (With cash / by card)</li>\n  <li><b>Customer:</b> <i>I'm looking for (some trousers / a jacket).</i> / <i>Can I try it / them on?</i> / <i>How much is it / are they?</i> / <i>I'll take it / them.</i></li>\n</ul>",
+    "items": [
+      {
+        "id": "u6e8q1",
+        "t": "mc",
+        "q": "1. Shop Assistant: Good morning! ___",
+        "o": [
+          "Can I help you?",
+          "What size are you?",
+          "Can I try them on?",
+          "How much are they?",
+          "by card"
+        ],
+        "a": "Can I help you?",
+        "why": "Shopping phrases (shop assistant and customer)"
+      },
+      {
+        "id": "u6e8q2",
+        "t": "mc",
+        "q": "2. Shop Assistant: ___",
+        "o": [
+          "Can I help you?",
+          "What size are you?",
+          "Can I try them on?",
+          "How much are they?",
+          "by card"
+        ],
+        "a": "What size are you?",
+        "why": "Shopping phrases (shop assistant and customer)"
+      },
+      {
+        "id": "u6e8q3",
+        "t": "mc",
+        "q": "3. Customer: I'm a medium. ___",
+        "o": [
+          "Can I help you?",
+          "What size are you?",
+          "Can I try them on?",
+          "How much are they?",
+          "by card"
+        ],
+        "a": "Can I try them on?",
+        "why": "Shopping phrases (shop assistant and customer)"
+      },
+      {
+        "id": "u6e8q4",
+        "t": "mc",
+        "q": "4. Customer: They fit very well. ___",
+        "o": [
+          "Can I help you?",
+          "What size are you?",
+          "Can I try them on?",
+          "How much are they?",
+          "by card"
+        ],
+        "a": "How much are they?",
+        "why": "Shopping phrases (shop assistant and customer)"
+      },
+      {
+        "id": "u6e8q5",
+        "t": "mc",
+        "q": "5. Customer: I am paying ___. Thank you!",
+        "o": [
+          "Can I help you?",
+          "What size are you?",
+          "Can I try them on?",
+          "How much are they?",
+          "by card"
+        ],
+        "a": "by card",
+        "why": "Shopping phrases (shop assistant and customer)"
+      }
+    ]
+  },
+  {
+    "id": "u6-ex9",
+    "title": "Shopping: Vocabulary Definitions",
+    "tag": "Unit 6 - Vocabulary",
+    "block": "Unit 6: Revision and Practice",
+    "inst": "Choose the correct word for each definition.",
+    "items": [
+      {
+        "id": "u6e9q1",
+        "t": "mc",
+        "q": "1. Clothes that were owned and worn by someone else before",
+        "o": [
+          "charity shop",
+          "second-hand",
+          "designer",
+          "review"
+        ],
+        "a": "second-hand",
+        "why": "Shopping vocabulary"
+      },
+      {
+        "id": "u6e9q2",
+        "t": "mc",
+        "q": "2. A shop that sells used items to get money for people who need help",
+        "o": [
+          "charity shop",
+          "second-hand",
+          "designer",
+          "review"
+        ],
+        "a": "charity shop",
+        "why": "Shopping vocabulary"
+      },
+      {
+        "id": "u6e9q3",
+        "t": "mc",
+        "q": "3. A person whose job is to create and draw new styles of clothing",
+        "o": [
+          "charity shop",
+          "second-hand",
+          "designer",
+          "review"
+        ],
+        "a": "designer",
+        "why": "Shopping vocabulary"
+      },
+      {
+        "id": "u6e9q4",
+        "t": "mc",
+        "q": "4. An opinion that someone writes online about a product",
+        "o": [
+          "charity shop",
+          "second-hand",
+          "designer",
+          "review"
+        ],
+        "a": "review",
+        "why": "Shopping vocabulary"
       }
     ]
   }
