@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="color-scheme" content="light">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>English Corner Preadol 1</title>
+<title>English Corner</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400..700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -311,6 +311,9 @@ function wordDist(w,t){
 function fuzzy(v,t){const vw=v.split(' '),tw=t.split(' ');if(vw.length!==tw.length)return null;let tot=0;const fixes=[];
  for(let i=0;i<vw.length;i++){const d=wordDist(vw[i],tw[i]);if(d<0)return null;if(d){tot+=d;fixes.push([vw[i],tw[i]])}}
  return tot&&tot<=2?{tot,fixes}:null}
+// Contracciones escritas sin apóstrofe (arent, isnt, dont, im...): cuentan como correctas, marcadas como error de tipeo
+const APOS={arent:"aren't",isnt:"isn't",wasnt:"wasn't",werent:"weren't",dont:"don't",doesnt:"doesn't",didnt:"didn't",cant:"can't",wont:"won't",havent:"haven't",hasnt:"hasn't",hadnt:"hadn't",couldnt:"couldn't",shouldnt:"shouldn't",wouldnt:"wouldn't",mustnt:"mustn't",im:"i'm",ive:"i've",youre:"you're",theyre:"they're",hes:"he's",shes:"she's",thats:"that's",whats:"what's"};
+function fixApos(v){const fx=[],t=norm(v).split(' ').map(w=>{if(APOS[w]){fx.push([w,APOS[w]]);return APOS[w]}return w}).join(' ');return fx.length?{t,fx}:null}
 // k: 'ok' | 'typo' (cuenta como correcta, con aviso) | 'no' | 'blank' | 'manual'
 function grade(it,v){
  if(manual(it))return{k:'manual'};
@@ -318,6 +321,7 @@ function grade(it,v){
  const nv=cn(v);if(!nv)return{k:'blank'};
  const keys=cands(it);
  if(keys.some(x=>cn(x)===nv))return{k:'ok'};
+ const fa=fixApos(v);if(fa){const n2=cn(fa.t);if(keys.some(x=>cn(x)===n2))return{k:'typo',fixes:fa.fx,ans:''}}
  let best=null;
  for(const x of keys){const f=fuzzy(nv,cn(x));if(f&&(!best||f.tot<best.tot))best={tot:f.tot,fixes:f.fixes,ans:x}}
  return best?{k:'typo',fixes:best.fixes,ans:best.ans}:{k:'no'}}

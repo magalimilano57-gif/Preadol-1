@@ -333,7 +333,7 @@
         "a": [
           "Yes, they are."
         ],
-        "why": "Short answers: Yes, he is. / No, he isn't."
+        "why": "Short answer with they: Yes, they are. / No, they aren't."
       },
       {
         "id": "u6e5q3",
@@ -351,7 +351,7 @@
         "a": [
           "Yes, he is."
         ],
-        "why": "Short answers: Yes, he is. / No, he isn't."
+        "why": "Short answer with he: Yes, he is. / No, he isn't."
       },
       {
         "id": "u6e5q5",
@@ -371,7 +371,7 @@
           "No, she's not.",
           "No, she is not."
         ],
-        "why": "Short answers: Yes, he is. / No, he isn't."
+        "why": "Short answer with she: Yes, she is. / No, she isn't."
       },
       {
         "id": "u6e5q7",
@@ -389,7 +389,7 @@
         "a": [
           "Yes, it is."
         ],
-        "why": "Short answers: Yes, he is. / No, he isn't."
+        "why": "Short answer with it: Yes, it is. / No, it isn't."
       },
       {
         "id": "u6e5q9",
@@ -409,7 +409,7 @@
           "No, they're not.",
           "No, they are not."
         ],
-        "why": "Short answers: Yes, he is. / No, he isn't."
+        "why": "Short answer with they: Yes, they are. / No, they aren't."
       }
     ]
   },
@@ -603,11 +603,11 @@
         "t": "mc",
         "q": "1. Which phrase goes in gap 1?",
         "o": [
-          "Can I help you?",
-          "What size are you?",
-          "Can I try them on?",
           "How much are they?",
-          "by card"
+          "Can I help you?",
+          "by card",
+          "Can I try them on?",
+          "What size are you?"
         ],
         "a": "Can I help you?",
         "why": "Shopping phrases (shop assistant and customer)"
@@ -617,11 +617,11 @@
         "t": "mc",
         "q": "2. Which phrase goes in gap 2?",
         "o": [
-          "Can I help you?",
-          "What size are you?",
-          "Can I try them on?",
           "How much are they?",
-          "by card"
+          "Can I help you?",
+          "by card",
+          "Can I try them on?",
+          "What size are you?"
         ],
         "a": "What size are you?",
         "why": "Shopping phrases (shop assistant and customer)"
@@ -631,11 +631,11 @@
         "t": "mc",
         "q": "3. Which phrase goes in gap 3?",
         "o": [
-          "Can I help you?",
-          "What size are you?",
-          "Can I try them on?",
           "How much are they?",
-          "by card"
+          "Can I help you?",
+          "by card",
+          "Can I try them on?",
+          "What size are you?"
         ],
         "a": "Can I try them on?",
         "why": "Shopping phrases (shop assistant and customer)"
@@ -645,11 +645,11 @@
         "t": "mc",
         "q": "4. Which phrase goes in gap 4?",
         "o": [
-          "Can I help you?",
-          "What size are you?",
-          "Can I try them on?",
           "How much are they?",
-          "by card"
+          "Can I help you?",
+          "by card",
+          "Can I try them on?",
+          "What size are you?"
         ],
         "a": "How much are they?",
         "why": "Shopping phrases (shop assistant and customer)"
@@ -659,11 +659,11 @@
         "t": "mc",
         "q": "5. Which phrase goes in gap 5?",
         "o": [
-          "Can I help you?",
-          "What size are you?",
-          "Can I try them on?",
           "How much are they?",
-          "by card"
+          "Can I help you?",
+          "by card",
+          "Can I try them on?",
+          "What size are you?"
         ],
         "a": "by card",
         "why": "Shopping phrases (shop assistant and customer)"
@@ -682,10 +682,10 @@
         "t": "mc",
         "q": "1. Clothes that were owned and worn by someone else before",
         "o": [
-          "charity shop",
+          "review",
           "second-hand",
           "designer",
-          "review"
+          "charity shop"
         ],
         "a": "second-hand",
         "why": "Shopping vocabulary"
@@ -695,10 +695,10 @@
         "t": "mc",
         "q": "2. A shop that sells used items to get money for people who need help",
         "o": [
-          "charity shop",
+          "review",
           "second-hand",
           "designer",
-          "review"
+          "charity shop"
         ],
         "a": "charity shop",
         "why": "Shopping vocabulary"
@@ -708,10 +708,10 @@
         "t": "mc",
         "q": "3. A person whose job is to create and draw new styles of clothing",
         "o": [
-          "charity shop",
+          "review",
           "second-hand",
           "designer",
-          "review"
+          "charity shop"
         ],
         "a": "designer",
         "why": "Shopping vocabulary"
@@ -721,10 +721,10 @@
         "t": "mc",
         "q": "4. An opinion that someone writes online about a product",
         "o": [
-          "charity shop",
+          "review",
           "second-hand",
           "designer",
-          "review"
+          "charity shop"
         ],
         "a": "review",
         "why": "Shopping vocabulary"
