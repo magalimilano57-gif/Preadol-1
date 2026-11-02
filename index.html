@@ -264,6 +264,51 @@ button.s{border-radius:99px}
 .dlg{margin:12px 0;background:var(--card);border:2px solid var(--line);border-radius:14px;padding:12px 16px}.dlg p{margin:6px 0}.dlg i{color:var(--mut)}
 .dbox{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}.dbox span{background:var(--gl);border:1.5px solid var(--g);border-radius:99px;padding:2px 12px;font-weight:700;font-size:15px}
 .gap{display:inline-block;min-width:44px;text-align:center;background:#fff;border:2px dashed var(--g);border-radius:8px;padding:0 8px;font-weight:800;color:var(--gd)}
+
+/* ===== TELÉFONO: sin scroll horizontal ===== */
+html{overflow-x:hidden;max-width:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;touch-action:pan-y pinch-zoom;overscroll-behavior-x:none}
+body{max-width:100%;overflow-x:clip;overflow-wrap:anywhere;overscroll-behavior-x:none}
+img,svg,video,canvas{max-width:100%}
+input.in,input[type=text],textarea,input[type=file]{max-width:100%;min-width:0}
+.card,.ex,.sec-h,.note,.why,.opt,.hero-t,details.th,.th-body li,.th-fm,.dlg{min-width:0;max-width:100%}
+.sec-h>div,.act-l>div,.prow .pbody,.tip>div{min-width:0}
+details.th .b{max-width:100%;touch-action:pan-x pan-y}
+@media (max-width:560px){input.in{width:100%;display:block;margin:6px 0}.opt{padding:10px 12px}}
+
+/* ===== ENCABEZADO COMPACTO (teléfono): una sola fila ===== */
+.ns{display:none}
+@media (max-width:700px){
+ .bar-in{padding:5px 10px;gap:4px;flex-wrap:nowrap}
+ .brand span{display:none}
+ .brand svg{width:32px;height:32px}
+ nav{flex:1;min-width:0;display:flex;gap:0;flex-wrap:nowrap;justify-content:space-around;overflow-x:auto;scrollbar-width:none;touch-action:pan-x}
+ nav::-webkit-scrollbar{display:none}
+ nav button{flex:none;padding:9px 9px;font-size:15px;white-space:nowrap}
+ .nl{display:none}.ns{display:inline}
+ .sprog{padding:4px 12px;margin-bottom:8px;gap:8px}
+ .sp-track{height:12px}
+ .sp-c b{font-size:17px}.sp-c{font-size:14.5px}
+ .sp-g svg{width:20px;height:20px}
+}
+
+/* ===== BOTÓN DE ENVÍO A LA PROFE ===== */
+.steps{display:flex;align-items:center;gap:8px;margin:0 0 14px}
+.st{flex:1 1 0;min-width:0;display:flex;align-items:center;gap:8px;background:var(--card);border:2px solid var(--line);border-radius:99px;padding:5px 12px 5px 6px;font:700 15px Fredoka,Nunito,sans-serif;color:var(--mut)}
+.st b{flex:none;width:26px;height:26px;border-radius:50%;background:var(--line);color:var(--gd);display:grid;place-items:center;font-size:14px}
+.st.now{border-color:var(--g);background:var(--gl);color:var(--gd)}.st.now b{background:var(--g);color:#1d2a13}
+.st.done{border-color:var(--ok);background:var(--okb);color:var(--ok)}.st.done b{background:var(--ok);color:#fff}
+.st-ar{flex:none;color:var(--mut);font-weight:800;font-size:22px;line-height:1}
+button.wide{width:100%;padding:14px 20px;font-size:18px}
+a.wa.wag{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;box-sizing:border-box;background:#17803f;color:#fff;border-radius:14px;padding:16px 20px;font-size:20px;box-shadow:0 6px 16px rgba(23,128,63,.35)}
+a.wa.wag:hover{filter:brightness(1.08)}
+.wag svg{width:28px;height:28px;flex:none}
+.wa-card{border:3px solid #17803f;background:linear-gradient(135deg,#e3f2da,#fff)}
+.wa-card .step{background:#17803f;color:#fff}
+.waflo{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:linear-gradient(180deg,rgba(246,249,238,0),var(--bg) 35%)}
+.waflo a.wa.wag{max-width:520px;margin:0 auto}
+.waflo.off{display:none}
+body.hasflo main{padding-bottom:110px}
+@media (prefers-reduced-motion:no-preference){.wa-card a.wag{animation:wapulse 2.2s ease-in-out infinite}@keyframes wapulse{0%,100%{box-shadow:0 6px 16px rgba(23,128,63,.35)}50%{box-shadow:0 6px 24px rgba(23,128,63,.7),0 0 0 6px rgba(23,128,63,.15)}}}
 </style></head>
 <body>
 <div class="deco" id="deco" aria-hidden="true">
@@ -280,7 +325,7 @@ const ACTS = [];
 
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const norm=s=>String(s||'').toLowerCase().replace(/[’`]/g,"'").replace(/[.,!?;:]/g,'').replace(/\s+/g,' ').trim();
+const norm=s=>String(s||'').toLowerCase().replace(/[’‘´`′]/g,"'").replace(/[.,!?;:]/g,' ').replace(/\s+/g,' ').trim();
 const S={ans:{},subs:{},revs:{},drafts:{},ro:false,checked:{},tab:'act',open:null,db:null,owner:false,canWrite:true,local:false,ups:[]};
 // ---- Corrección automática ----
 // Pregunta de reflexión (la corrige la profesora): t:'open' sin respuesta modelo "a", o con refl:true.
@@ -293,7 +338,7 @@ const CONF=new Set(["its|it's","than|then","their|there","there|they're","their|
 const SUF=new Set(['','s','es','ed','d','ing','ly','ily','er','ier','est','iest','en','ies','ied','y','e','ness','ment','ful','less','al','ation','tion']);
 let VOC=null,VOCN=-1;
 function vocab(){if(VOC&&VOCN===ACTS.length)return VOC;VOC=new Set();VOCN=ACTS.length;
- const add=x=>{(String(x||'').replace(/<[^>]+>/g,' ').toLowerCase().replace(/[’`]/g,"'").match(/[a-z']+/g)||[]).forEach(w=>VOC.add(w))};
+ const add=x=>{(String(x||'').replace(/<[^>]+>/g,' ').toLowerCase().replace(/[’‘´`′]/g,"'").match(/[a-z']+/g)||[]).forEach(w=>VOC.add(w))};
  ACTS.forEach(a=>{add(a.theory);a.items.forEach(it=>{add(it.q);[].concat(it.a||[]).forEach(y=>add(y));(it.o||[]).forEach(y=>add(y))})});return VOC}
 function dl(a,b){const m=a.length,n=b.length,d=[];for(let i=0;i<=m;i++)d[i]=[i];for(let j=1;j<=n;j++)d[0][j]=j;
  for(let i=1;i<=m;i++)for(let j=1;j<=n;j++){const c=a[i-1]===b[j-1]?0:1;d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+c);
@@ -423,7 +468,7 @@ function viewAct(b){
   return `${i?`<div class="sep">${LOGO(26)}</div>`:''}<section class="sec" id="sec-${i}" style="--sc:${c[0]};--st:${c[1]}">${progHTML(a,i)}${head}${theory}${a.img?`<figure class="act-img"><a href="${esc(a.img)}" target="_blank" rel="noopener"><img src="${esc(a.img)}" alt="${esc(a.imgAlt||'')}" loading="lazy"></a><figcaption>Tap the picture to see it bigger.</figcaption></figure>`:''}${a.dialogue?dlgHTML(a.dialogue):''}${a.items.map((it,j)=>renderItem(a,it,j)).join('')}${res}</section>`}).join('');
  const msgs=b.acts.filter(a=>S.revs[a.id]?.c).map(a=>`<div class="why" style="border-color:var(--g)"><b>Message from your teacher${multi?' ('+esc(short(a.title))+')':''}:</b> ${esc(S.revs[a.id].c)}</div>`).join('');
  const tc=typoCount(b);const sum=chk?`<div class="card" id="sum" style="scroll-margin-top:100px"><div class="sc">${sc.n} /${sc.total}</div><p style="margin:4px 0">${sc.pend?'Reflection questions are waiting for your teacher.':'Everything is checked.'}</p>${tc?`<p style="margin:4px 0">${tc} answer${tc>1?'s were':' was'} counted as correct, but with a spelling slip. Look for the orange notes.</p>`:''}${msgs}</div>`:'';
- return `<button class="s" id="back">← Back</button><h2 style="margin-top:14px">${esc(b.title)}</h2><p class="sub">${esc(b.tag)} · ${st}</p>${hint}${jump}${secs}<div class="sep">${LOGO(26)}</div>${sum}<div class="row" style="margin:0 0 12px"><button class="p" id="send">${chk?'Check again and submit':'Check and submit'}</button></div>${chk?waCard(b):'<p class="nxt-h">After checking, the next step is to send your work to your teacher.</p>'}`}
+ return `<button class="s" id="back">← Back</button><h2 style="margin-top:14px">${esc(b.title)}</h2><p class="sub">${esc(b.tag)} · ${st}</p>${hint}${jump}${secs}<div class="sep">${LOGO(26)}</div>${stepsHTML(chk)}${sum}${chk?waCard(b):''}<div class="row" style="margin:12px 0"><button class="${chk?'s':'p'} wide" id="send">${chk?'Check my answers again':'Check my answers'}</button></div>${chk?'':'<p class="nxt-h">After checking, a green button will appear to send your work to your teacher on WhatsApp.</p>'}${chk?floatWA(b):''}`}
 
 function viewList(){
  if(!ACTS.length)return `<h2 id="acts">Your activities</h2><div class="card empty"><span class="big">${LOGO(88)}</span><h3 style="margin:0 0 6px">No activities yet</h3><p style="margin:0;color:var(--mut)">Your next activity will show up here. See you after the next class!</p></div>`;
@@ -459,7 +504,7 @@ const actTitle=id=>BLOCKS.find(b=>b.id===id)?.title||ACTS.find(a=>a.id===id)?.ti
 function upBtn(id,t){return `<button class="s" data-del="${esc(id)}" style="padding:2px 8px;font-size:14.33px">${t}</button>`}
 const WA='5491163667870';
 const plain=h=>String(h||'').replace(/<br\s*\/?>/gi,' ').replace(/<[^>]+>/g,'').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/\s+/g,' ').trim();
-const wt=s=>String(s==null?'':s).replace(/[\u2018\u2019`]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/[\u2013\u2014]/g,'-').replace(/\uFFFD/g,'').replace(/\s+/g,' ').trim();
+const wt=s=>String(s==null?'':s).replace(/[\u2018\u2019\u00B4\u2032`]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/[\u2013\u2014]/g,'-').replace(/\uFFFD/g,'').replace(/\s+/g,' ').trim();
 // Mensaje para WhatsApp: solo texto ASCII + *negritas*, sin emojis (evita el caracter roto) y sin lineas en blanco de mas
 function waMsg(b){
  const multi=b.acts.length>1;let N=0,T=0,P=0;const secs=[];
@@ -478,15 +523,19 @@ function waMsg(b){
   if(typo.length)t.push('Spelling:',...typo);
   if(man.length)t.push('For you to review:',...man);
   secs.push({a,sc,why,bad,t,nm})});
- const L=['Hi teacher! Here is my homework: *'+wt(b.title)+'*','Score: *'+N+'/'+T+'*'+(P?' (+ '+P+' for you to review)':'')];
- secs.forEach(s=>L.push('',...s.t));
+ const DIV='--------------------';
+ const L=['Hi teacher! Here is my homework: *'+wt(b.title)+'*','','Score: *'+N+'/'+T+'*'+(P?' (+ '+P+' for you to review)':'')];
+ secs.forEach(s=>L.push('',DIV,'',...s.t));
  const weak=secs.filter(s=>s.bad.length).sort((x,y)=>x.sc.n/x.sc.total-y.sc.n/y.sc.total);
- if(weak.length){L.push('','*I need to review:*');
+ if(weak.length){L.push('',DIV,'','*I need to review:*');
   weak.forEach(s=>L.push('- '+(multi?wt(short(s.a.title))+' ('+s.sc.n+'/'+s.sc.total+')':'')+(multi&&s.why.length?': ':'')+s.why.slice(0,4).join('; ')+(s.why.length>4?'; +'+(s.why.length-4)+' more':'')))}
- else if(!P)L.push('','I got everything right!');
+ else if(!P)L.push('',DIV,'','I got everything right!');
  return L.join('\n')}
 const waUrl=a=>'https://wa.me/'+WA+'?text='+encodeURIComponent(a?waMsg(a):'Hi teacher!');
-function waCard(a){return `<div class="card next" id="next"><span class="step">Next step</span><h3 style="margin-top:8px">Send your work to your teacher</h3><p style="margin:0 0 12px;color:var(--mut)">This opens WhatsApp with your answers already written. Just press send. Did something on paper? Attach the photo in the chat.</p><a class="wa big" data-wa="${a.id}" href="${waUrl(a)}" target="_blank" rel="noopener">Send to teacher</a></div>`}
+const CHAT=`<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4C9.4 4 4 9 4 15.2c0 3 1.3 5.7 3.5 7.7L6 28l5.4-2.2c1.4.4 3 .6 4.6.6 6.6 0 12-5 12-11.2S22.6 4 16 4Z" fill="#fff"/><path d="M10.5 15.5l3.6 3.6 7.4-7.4" fill="none" stroke="#17803f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+function stepsHTML(chk){return `<div class="steps"><div class="st ${chk?'done':'now'}"><b>${chk?'✓':'1'}</b><span>Check</span></div><div class="st-ar">›</div><div class="st ${chk?'now':''}"><b>2</b><span>Send</span></div></div>`}
+function floatWA(a){return `<div class="waflo"><a class="wa wag" data-wa="${a.id}" href="${waUrl(a)}" target="_blank" rel="noopener">${CHAT}<span>Send to teacher</span></a></div>`}
+function waCard(a){return `<div class="card next wa-card" id="next"><span class="step">Step 2 · Don't forget!</span><h3 style="margin-top:8px">Send your work to your teacher</h3><p style="margin:0 0 14px;color:var(--ink)">Press the green button. WhatsApp opens with your answers already written. <b>Then press the send arrow ➤ inside WhatsApp.</b> Your teacher only gets it after you press send. Did something on paper? Attach the photo in the chat.</p><a class="wa wag" data-wa="${a.id}" href="${waUrl(a)}" target="_blank" rel="noopener">${CHAT}<span>Send to teacher</span></a></div>`}
 function uploadCard(a){
  const mine=S.ups.filter(u=>(a.id==='general'||u.act===a.id)&&okImg(u.img));
  const list=mine.length?`<div class="ups" style="margin-top:12px">${mine.map(u=>`<figure class="up"><img src="${u.img}" data-view="${esc(u.id)}" alt="Your uploaded work"><figcaption><span>${new Date(u.at).toLocaleDateString('en-GB')}</span>${upBtn(u.id,'Remove')}</figcaption></figure>`).join('')}</div>`:'';
@@ -540,9 +589,13 @@ function render(){buildBlocks();
  let body;
  if(S.tab==='act')body=S.open&&BLOCKS.find(b=>b.id===S.open)?viewAct(BLOCKS.find(b=>b.id===S.open)):viewList();
  else if(S.tab==='prog')body=viewProg();else if(S.tab==='game')body=viewGame();else if(S.tab==='up')body='<h2>Send your paper work</h2><p class="sub">Did your homework by hand? Take a photo and send it to your teacher.</p>'+uploadCard({id:'general'});else body=viewTeach();
- $('#top').innerHTML=`<div class="bar-in"><button class="brand" data-tab="act" aria-label="Home">${LOGO(40)}<span>English Corner</span></button><nav>${tabs.map(([k,l])=>`<button data-tab="${k}" class="${S.tab===k?'on':''}">${l}</button>`).join('')}</nav></div>`;
+ const NS={act:'Activities',up:'Photo',prog:'Progress',game:'Break',teach:'Review'};
+ $('#top').innerHTML=`<div class="bar-in"><button class="brand" data-tab="act" aria-label="Home">${LOGO(40)}<span>English Corner</span></button><nav>${tabs.map(([k,l])=>`<button data-tab="${k}" class="${S.tab===k?'on':''}" aria-label="${l}"><span class="nl">${l}</span><span class="ns">${NS[k]||l}</span></button>`).join('')}</nav></div>`;
  const hero=S.tab==='act'&&!S.open?heroHTML()+featHTML():'';
- $('#app').innerHTML=hero+body;setHH()}
+ $('#app').innerHTML=hero+body;setHH();setupFlo()}
+// Botón flotante "Send to teacher": aparece abajo mientras la tarjeta verde de envío no está a la vista
+let IO;function setupFlo(){if(IO)IO.disconnect();const n=$('#next'),f=$('.waflo');document.body.classList.toggle('hasflo',!!f);
+ if(!n||!f||!window.IntersectionObserver)return;IO=new IntersectionObserver(es=>f.classList.toggle('off',es[0].isIntersecting));IO.observe(n)}
 
 function setAns(a,q,v){if(!a)return;(S.ans[a]=S.ans[a]||{})[q]=v}
 document.addEventListener('input',e=>{const q=e.target.dataset?.q;if(q){setAns(e.target.dataset.a,q,e.target.value);updProg(e.target.dataset.a)}});
