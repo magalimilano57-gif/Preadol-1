@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
-<meta name="color-scheme" content="light">
+<meta name="color-scheme" content="light dark">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>English Corner</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -309,6 +309,59 @@ a.wa.wag:hover{filter:brightness(1.08)}
 .waflo.off{display:none}
 body.hasflo main{padding-bottom:110px}
 @media (prefers-reduced-motion:no-preference){.wa-card a.wag{animation:wapulse 2.2s ease-in-out infinite}@keyframes wapulse{0%,100%{box-shadow:0 6px 16px rgba(23,128,63,.35)}50%{box-shadow:0 6px 24px rgba(23,128,63,.7),0 0 0 6px rgba(23,128,63,.15)}}}
+
+/* ===== Etiqueta de estado (Submitted / Not started) dentro de cada tarjeta ===== */
+.card.act{flex-wrap:wrap;row-gap:8px;position:relative}
+.card.act .act-l{flex:1 1 200px;min-width:0}
+.card.act>.chip{flex:none;max-width:100%;margin-left:auto}
+
+/* ===== MEJORAS DE USO: contraste, foco, botones tactiles, guardado, copiar ===== */
+:root{--mut:#56634a;--ok:#2f6a26}
+input[type=text]:focus,textarea:focus{outline:3px solid var(--gd);outline-offset:2px;border-color:var(--gd);box-shadow:none}
+.opt:has(input:focus-visible){outline:3px solid var(--gd);outline-offset:2px}
+@media (pointer:coarse),(max-width:700px){
+ nav button{min-height:44px}
+ .brand{min-width:44px;min-height:44px;justify-content:center}
+ button.s,button.p,button.wide{min-height:44px}
+ .jump a{min-height:44px;padding-top:6px;padding-bottom:6px}
+ input.in,input[type=text],textarea{min-height:44px}
+ .opt{min-height:44px;display:flex;align-items:center}
+ details.th summary{min-height:44px}
+}
+.fixline{margin:6px 0 10px;font-weight:700}
+.fixline b{display:block;font:600 22px Fredoka,Nunito,sans-serif;color:var(--no)}
+.cheer{display:flex;align-items:center;gap:12px;background:var(--okb);border:2px solid var(--ok);color:var(--ok);border-radius:16px;padding:10px 14px;margin:10px 0;font-weight:800}
+.alt{margin:16px 0 8px;color:var(--mut);font-weight:700;font-size:15.5px}
+.copyrow{display:flex;gap:8px;flex-wrap:wrap}
+.cbtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;flex:1 1 150px;min-height:44px;padding:8px 14px;border:2px solid var(--gd);border-radius:12px;background:var(--card);color:var(--gd);font:700 16px Fredoka,Nunito,system-ui,sans-serif;text-decoration:none;cursor:pointer}
+.cbtn:hover{background:var(--gl)}
+@media (max-width:520px){.cbtn{flex:1 1 100%}}
+.cbtn svg{width:20px;height:20px;flex:none}
+.copyhint{flex-basis:100%;margin:2px 0 0;font-weight:800;color:var(--gd)}
+.copyhint:empty{display:none}
+.copybox{flex-basis:100%;width:100%;min-height:150px;font:15px/1.4 ui-monospace,Menlo,Consolas,monospace;padding:10px;border:2px solid var(--gd);border-radius:12px;background:var(--card);color:var(--ink)}
+
+/* ===== MODO OSCURO (sigue la configuracion del telefono) ===== */
+@media (prefers-color-scheme:dark){
+ :root{color-scheme:dark;--bg:#141b10;--card:#1d2617;--ink:#eaf1df;--mut:#a9b79a;--gd:#b7dc86;--gl:#2b3a22;--ok:#7fd16a;--okb:#1f3a1b;--no:#ff9a82;--nob:#3b1f18;--line:#34442b}
+ body{background-image:radial-gradient(#202b19 1.6px,transparent 1.6px)}
+ .top{background:rgba(29,38,23,.92)}
+ .hero{background:linear-gradient(135deg,var(--gl) 0%,#1a2315 55%,var(--card) 100%)}
+ .hero-art::before{background:radial-gradient(circle,rgba(255,255,255,.07) 0%,rgba(255,255,255,0) 68%)}
+ .sec-h,.jump a,.prow,.sprog,.sec-res,.sec details.th{background:color-mix(in srgb,var(--sc,#8fb85a) 20%,var(--card))}
+ .sec-h .chip,.prow .chip{background:var(--card)}
+ .sec-n{box-shadow:0 0 0 4px var(--card)}.sec-n.sm{box-shadow:0 0 0 3px var(--card)}.th-l{box-shadow:0 0 0 2px var(--card)}
+ .dots i{border-color:var(--card)}
+ .sp-track,.gap,.act-img img,.lb img{background:var(--card)}
+ .opt:hover{background:var(--gl)}
+ .ex.typo{background:#3a2f12;border-color:#c8962b}.tn{color:#f0c96a}
+ .tw u.tx{background:#6a2f22}.tr u.tx{background:#2f5a2a}
+ details.th .th-warn{background:#3a2f12}
+ .wa-card{background:linear-gradient(135deg,#1f3a1b,var(--card))}
+ .gb{background:radial-gradient(#3a4a30 1.4px,transparent 1.6px) 0 0/14px 14px,var(--gl)}
+ .card.act:hover{box-shadow:0 8px 20px rgba(0,0,0,.4)}
+ .card,.ex,.sec-h{box-shadow:0 2px 10px rgba(0,0,0,.25)}
+}
 </style></head>
 <body>
 <div class="deco" id="deco" aria-hidden="true">
@@ -396,12 +449,27 @@ function typoCount(b){return b.acts.reduce((n,a)=>n+a.items.filter(it=>grade(it,
 
 function lsGet(k){try{return JSON.parse(localStorage.getItem(k)||'null')}catch(e){return null}}
 function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+const LSOK=(()=>{try{localStorage.setItem('ec-t','1');localStorage.removeItem('ec-t');return true}catch(e){return false}})();
+// Borrador: cada respuesta se guarda al escribirla (si el telefono recarga la pestaña, no se pierde nada)
+function saveDraft(a){if(a)lsSet('ec-draft-'+a,S.ans[a]||{})}
 
-function score(a){const sub=S.subs[a.id],rev=S.revs[a.id];let n=0,pend=0;
- for(const it of a.items){const v=sub?.answers?.[it.id];
+// Puntaje de una actividad con unas respuestas dadas (las del primer intento, las finales, etc.)
+function tally(a,ans){const rev=S.revs[a.id];let n=0,pend=0;
+ for(const it of a.items){const v=ans?.[it.id];
   if(manual(it)){const m=rev?.m?.[it.id];if(m)n+=m.ok?1:0;else pend++}
   else if(ok(it,v))n++}
  return{n,total:a.items.length,pend}}
+function score(a){return tally(a,S.subs[a.id]?.answers)}
+// Primer intento: lo que el alumno respondio la PRIMERA vez que toco "Check my answers" (no se pisa al corregir)
+const firstOf=a=>{const s=S.subs[a.id];return s?(s.first||s):null};
+const cp=o=>JSON.parse(JSON.stringify(o||{}));
+function firstFor(a,now){
+ const st=lsGet('ec-sub-'+a.id)||S.subs[a.id];
+ const f=S.subs[a.id]?.first||lsGet('ec-sub-'+a.id)?.first;
+ if(f)return f;
+ // envios viejos (de antes de guardar el primer intento): el ultimo envio guardado es lo mas cercano que hay
+ if(st?.answers)return{answers:cp(st.answers),at:st.at};
+ return{answers:cp(S.ans[a.id]),at:now}}
 function status(a){const s=S.subs[a.id];if(!s)return['Not started',0];return S.revs[a.id]?['Reviewed',2]:['Submitted',1]}
 
 function renderItem(a,it,i){
@@ -459,7 +527,7 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-say]');if(
 function dlgHTML(d){return '<div class="dlg">'+(d.box?'<div class="dbox">'+d.box.map(x=>'<span>'+esc(x)+'</span>').join('')+'</div>':'')+d.lines.map(l=>'<p>'+(l[0]?'<b>'+esc(l[0])+':</b> ':'<i>')+esc(l[1]).replace(/\{(\d+)\}/g,'<span class="gap">$1</span>')+(l[0]?'':'</i>')+'</p>').join('')+'</div>'}
 function viewAct(b){
  const [st]=blockStatus(b);const multi=b.acts.length>1;const chk=b.acts.every(a=>S.checked[a.id]);const sc=blockScore(b);
- const hint=S.local?'<div class="note">Your answers are saved only on this device. When you finish, use the button at the end to send them to your teacher on WhatsApp.</div>':'';
+ const hint=S.local?`<div class="note">${LSOK?'Your answers are saved on this device while you write.':'Keep this page open while you write: your answers are not saved if you leave it.'} When you finish, use the button at the end to send them to your teacher on WhatsApp.</div>`:'';
  const jump=multi?`<div class="jump"><span>Jump to:</span>${b.acts.map((a,i)=>{const c=SECC[i%SECC.length];return `<a href="#sec-${i}" style="--sc:${c[0]};--st:${c[1]}"><b>${i+1}</b> ${esc(short(a.title))}</a>`}).join('')}</div>`:'';
  const secs=b.acts.map((a,i)=>{const c=SECC[i%SECC.length];const s1=score(a);const ck=S.checked[a.id];
   const head=multi?`<div class="sec-h"><span class="sec-n">${i+1}</span><div><span class="chip">${esc(a.tag)} · ${a.items.length} exercises</span><h3>${esc(short(a.title))}</h3>${a.inst?`<p class="sec-inst">${esc(a.inst)}</p>`:''}</div></div>`:(a.inst?`<div class="note">${esc(a.inst)}</div>`:'');
@@ -467,7 +535,11 @@ function viewAct(b){
   const res=ck&&multi?`<div class="card sec-res"><b>Section ${i+1} result:</b> ${s1.n} / ${s1.total}${s1.pend?` · ${s1.pend} open questions waiting for your teacher`:''}</div>`:'';
   return `${i?`<div class="sep">${LOGO(26)}</div>`:''}<section class="sec" id="sec-${i}" style="--sc:${c[0]};--st:${c[1]}">${progHTML(a,i)}${head}${theory}${a.img?`<figure class="act-img"><a href="${esc(a.img)}" target="_blank" rel="noopener"><img src="${esc(a.img)}" alt="${esc(a.imgAlt||'')}" loading="lazy"></a><figcaption>Tap the picture to see it bigger.</figcaption></figure>`:''}${a.dialogue?dlgHTML(a.dialogue):''}${a.items.map((it,j)=>renderItem(a,it,j)).join('')}${res}</section>`}).join('');
  const msgs=b.acts.filter(a=>S.revs[a.id]?.c).map(a=>`<div class="why" style="border-color:var(--g)"><b>Message from your teacher${multi?' ('+esc(short(a.title))+')':''}:</b> ${esc(S.revs[a.id].c)}</div>`).join('');
- const tc=typoCount(b);const sum=chk?`<div class="card" id="sum" style="scroll-margin-top:100px"><div class="sc">${sc.n} /${sc.total}</div><p style="margin:4px 0">${sc.pend?'Reflection questions are waiting for your teacher.':'Everything is checked.'}</p>${tc?`<p style="margin:4px 0">${tc} answer${tc>1?'s were':' was'} counted as correct, but with a spelling slip. Look for the orange notes.</p>`:''}${msgs}</div>`:'';
+ const tc=typoCount(b);
+ const bad=(a,ans)=>a.items.filter(it=>{if(manual(it))return false;const k=grade(it,(ans||{})[it.id]).k;return k==='no'||k==='blank'}).length;
+ const fixN=b.acts.reduce((n,a)=>n+bad(a,S.ans[a.id]),0),wrongFirst=b.acts.reduce((n,a)=>n+bad(a,firstOf(a)?.answers),0);
+ const fixHTML=!chk?'':fixN?`<p class="fixline"><b>${fixN} to fix</b> Read the hint under each mistake and try again.</p><button class="p wide" data-fix type="button">Go to the first mistake</button>`:`<div class="cheer">${LOGO(34)}<div>${wrongFirst?'You fixed your mistakes. Great job!':'Perfect on your first try!'} Now send your work to your teacher.</div></div>`;
+ const sum=chk?`<div class="card" id="sum" style="scroll-margin-top:100px"><div class="sc">${sc.n} /${sc.total}</div><p style="margin:4px 0">${sc.pend?'Reflection questions are waiting for your teacher.':'Everything is checked.'}</p>${fixHTML}${tc?`<p style="margin:4px 0">${tc} answer${tc>1?'s were':' was'} counted as correct, but with a spelling slip. Look for the orange notes.</p>`:''}${msgs}</div>`:'';
  return `<button class="s" id="back">← Back</button><h2 style="margin-top:14px">${esc(b.title)}</h2><p class="sub">${esc(b.tag)} · ${st}</p>${hint}${jump}${secs}<div class="sep">${LOGO(26)}</div>${stepsHTML(chk)}${sum}${chk?waCard(b):''}<div class="row" style="margin:12px 0"><button class="${chk?'s':'p'} wide" id="send">${chk?'Check my answers again':'Check my answers'}</button></div>${chk?'':'<p class="nxt-h">After checking, a green button will appear to send your work to your teacher on WhatsApp.</p>'}${chk?floatWA(b):''}`}
 
 function viewList(){
@@ -496,7 +568,7 @@ function viewTeach(){
   return `<div class="ex"><p class="q">${it.q}</p><p style="white-space:pre-wrap;margin:6px 0"><b>Answer:</b> ${esc(s.answers?.[it.id]||'(empty)')}</p>
   <div class="row"><label><input type="radio" name="r-${a.id}-${it.id}" value="1" ${m.ok===true?'checked':''}> Good</label><label><input type="radio" name="r-${a.id}-${it.id}" value="0" ${m.ok===false?'checked':''}> Needs work</label></div>
   <input type="text" data-n="${a.id}|${it.id}" placeholder="Note for her (optional)" value="${esc(m.n||'')}" style="margin-top:8px"></div>`}).join('');
- return `<div class="card"><h3 style="margin-top:0">${esc(a.title)}</h3><p style="margin:0 0 8px">Automatic + reviewed: <b>${sc.n}/${sc.total}</b></p>${opens}
+ return `<div class="card"><h3 style="margin-top:0">${esc(a.title)}</h3><p style="margin:0 0 8px">Automatic + reviewed: <b>${sc.n}/${sc.total}</b>${(()=>{const f=tally(a,firstOf(a)?.answers);return f.n!==sc.n?` · First try: <b>${f.n}/${f.total}</b>`:''})()}</p>${opens}
  <textarea data-c="${a.id}" placeholder="General message for the student and her family (optional)">${esc(r.c||'')}</textarea><div class="row"><button class="s" data-save="${a.id}">Save draft (private)</button><button class="p" data-pub="${a.id}">Publish feedback</button></div></div>`}).join('')}
 
 const okImg=s=>/^data:image\/jpeg;base64,[A-Za-z0-9+\/=]+$/.test(s||'');
@@ -505,37 +577,43 @@ function upBtn(id,t){return `<button class="s" data-del="${esc(id)}" style="padd
 const WA='5491163667870';
 const plain=h=>String(h||'').replace(/<br\s*\/?>/gi,' ').replace(/<[^>]+>/g,'').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/\s+/g,' ').trim();
 const wt=s=>String(s==null?'':s).replace(/[\u2018\u2019\u00B4\u2032`]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/[\u2013\u2014]/g,'-').replace(/\uFFFD/g,'').replace(/\s+/g,' ').trim();
-// Mensaje para WhatsApp: solo texto ASCII + *negritas*, sin emojis (evita el caracter roto) y sin lineas en blanco de mas
+// Mensaje para WhatsApp: solo texto ASCII + *negritas*, sin emojis. Muestra primero el resultado del PRIMER intento
+// (antes de ver las correcciones) y despues, si cambio, el resultado final.
 function waMsg(b){
- const multi=b.acts.length>1;let N=0,T=0,P=0;const secs=[];
- b.acts.forEach((a,si)=>{const sc=score(a);N+=sc.n;T+=sc.total;P+=sc.pend;
+ const multi=b.acts.length>1;let F=0,N=0,T=0,P=0;const secs=[];
+ b.acts.forEach((a,si)=>{
+  const fa=firstOf(a)?.answers||S.ans[a.id]||{},la=S.ans[a.id]||{};
+  const f=tally(a,fa),l=tally(a,la);F+=f.n;N+=l.n;T+=l.total;P+=l.pend;
   const okN=[],bad=[],typo=[],man=[],why=[];
-  a.items.forEach((it,i)=>{const k=i+1,v=wt((S.ans[a.id]||{})[it.id]),g=grade(it,v);
-   if(g.k==='manual')man.push(k+'. '+(v||'(no answer)'));
+  a.items.forEach((it,i)=>{const k=i+1,fv=wt(fa[it.id]),lv=wt(la[it.id]),g=grade(it,fv);
+   if(g.k==='manual')man.push(k+'. '+(lv||'(no answer)'));
    else if(g.k==='ok')okN.push(k);
-   else if(g.k==='typo'){okN.push(k);typo.push(k+'. '+g.fixes.map(f=>f[0]+' -> '+f[1]).join(', '))}
-   else{bad.push(k+'. '+(v||'(no answer)')+' -> '+wt(it.t==='mc'?it.a:[].concat(it.a)[0]));
+   else if(g.k==='typo'){okN.push(k);typo.push(k+'. '+g.fixes.map(x=>x[0]+' -> '+x[1]).join(', '))}
+   else{bad.push(k+'. '+(fv||'(no answer)')+' -> '+wt(it.t==='mc'?it.a:[].concat(it.a)[0])+(ok(it,lv)?' (fixed later)':' (still wrong)'));
     let w=wt(plain(it.why)).replace(/\.$/,'').replace(/^(review|remember)\s+(the\s+)?/i,'');w=w.charAt(0).toUpperCase()+w.slice(1);if(w&&!why.includes(w))why.push(w)}});
   const nm=multi?(si+1)+'. '+short(a.title):a.title;
-  const t=['*'+wt(nm)+'* ('+sc.n+'/'+sc.total+')'];
+  const t=['*'+wt(nm)+'* (first try '+f.n+'/'+f.total+(l.n!==f.n?', after corrections '+l.n+'/'+l.total:'')+')'];
   if(okN.length)t.push('Correct: '+okN.join(', '));
   if(bad.length)t.push('Wrong:',...bad);
   if(typo.length)t.push('Spelling:',...typo);
   if(man.length)t.push('For you to review:',...man);
-  secs.push({a,sc,why,bad,t,nm})});
+  secs.push({a,sc:f,why,bad,t,nm})});
  const DIV='--------------------';
- const L=['Hi teacher! Here is my homework: *'+wt(b.title)+'*','','Score: *'+N+'/'+T+'*'+(P?' (+ '+P+' for you to review)':'')];
+ const L=['Hi teacher! Here is my homework: *'+wt(b.title)+'*','','First try: *'+F+'/'+T+'*'+(P?' (+ '+P+' for you to review)':'')];
+ if(N!==F)L.push('After corrections: *'+N+'/'+T+'*');
  secs.forEach(s=>L.push('',DIV,'',...s.t));
  const weak=secs.filter(s=>s.bad.length).sort((x,y)=>x.sc.n/x.sc.total-y.sc.n/y.sc.total);
  if(weak.length){L.push('',DIV,'','*I need to review:*');
   weak.forEach(s=>L.push('- '+(multi?wt(short(s.a.title))+' ('+s.sc.n+'/'+s.sc.total+')':'')+(multi&&s.why.length?': ':'')+s.why.slice(0,4).join('; ')+(s.why.length>4?'; +'+(s.why.length-4)+' more':'')))}
- else if(!P)L.push('',DIV,'','I got everything right!');
+ else if(!P)L.push('',DIV,'','I got everything right on the first try!');
  return L.join('\n')}
 const waUrl=a=>'https://wa.me/'+WA+'?text='+encodeURIComponent(a?waMsg(a):'Hi teacher!');
 const CHAT=`<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4C9.4 4 4 9 4 15.2c0 3 1.3 5.7 3.5 7.7L6 28l5.4-2.2c1.4.4 3 .6 4.6.6 6.6 0 12-5 12-11.2S22.6 4 16 4Z" fill="#fff"/><path d="M10.5 15.5l3.6 3.6 7.4-7.4" fill="none" stroke="#17803f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 function stepsHTML(chk){return `<div class="steps"><div class="st ${chk?'done':'now'}"><b>${chk?'✓':'1'}</b><span>Check</span></div><div class="st-ar">›</div><div class="st ${chk?'now':''}"><b>2</b><span>Send</span></div></div>`}
 function floatWA(a){return `<div class="waflo"><a class="wa wag" data-wa="${a.id}" href="${waUrl(a)}" target="_blank" rel="noopener">${CHAT}<span>Send to teacher</span></a></div>`}
-function waCard(a){return `<div class="card next wa-card" id="next"><span class="step">Step 2 · Don't forget!</span><h3 style="margin-top:8px">Send your work to your teacher</h3><p style="margin:0 0 14px;color:var(--ink)">Press the green button. WhatsApp opens with your answers already written. <b>Then press the send arrow ➤ inside WhatsApp.</b> Your teacher only gets it after you press send. Did something on paper? Attach the photo in the chat.</p><a class="wa wag" data-wa="${a.id}" href="${waUrl(a)}" target="_blank" rel="noopener">${CHAT}<span>Send to teacher</span></a></div>`}
+const IC_COPY=`<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="3" width="12" height="14" rx="2.500" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 21H6a2 2 0 0 1-2-2V8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`;
+const IC_OPEN=`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+function waCard(a){return `<div class="card next wa-card" id="next"><span class="step">Step 2 · Don't forget!</span><h3 style="margin-top:8px">Send your work to your teacher</h3><p style="margin:0 0 14px;color:var(--ink)">Press the green button. WhatsApp opens with your answers already written. <b>Then press the send arrow ➤ inside WhatsApp.</b> Your teacher only gets it after you press send. Did something on paper? Attach the photo in the chat.</p><a class="wa wag" data-wa="${a.id}" href="${waUrl(a)}" target="_blank" rel="noopener">${CHAT}<span>Send to teacher</span></a><p class="alt">WhatsApp did not open or the message is empty? Copy it and paste it in the chat:</p><div class="copyrow"><button class="cbtn" data-copy="${a.id}" type="button">${IC_COPY}<span>Copy message</span></button><a class="cbtn" href="https://wa.me/${WA}" target="_blank" rel="noopener">${IC_OPEN}<span>Open the chat</span></a><p class="copyhint" id="copyhint" role="status" aria-live="polite"></p><textarea class="copybox" id="copybox" readonly hidden aria-label="Message to copy"></textarea></div></div>`}
 function uploadCard(a){
  const mine=S.ups.filter(u=>(a.id==='general'||u.act===a.id)&&okImg(u.img));
  const list=mine.length?`<div class="ups" style="margin-top:12px">${mine.map(u=>`<figure class="up"><img src="${u.img}" data-view="${esc(u.id)}" alt="Your uploaded work"><figcaption><span>${new Date(u.at).toLocaleDateString('en-GB')}</span>${upBtn(u.id,'Remove')}</figcaption></figure>`).join('')}</div>`:'';
@@ -598,8 +676,8 @@ let IO;function setupFlo(){if(IO)IO.disconnect();const n=$('#next'),f=$('.waflo'
  if(!n||!f||!window.IntersectionObserver)return;IO=new IntersectionObserver(es=>f.classList.toggle('off',es[0].isIntersecting));IO.observe(n)}
 
 function setAns(a,q,v){if(!a)return;(S.ans[a]=S.ans[a]||{})[q]=v}
-document.addEventListener('input',e=>{const q=e.target.dataset?.q;if(q){setAns(e.target.dataset.a,q,e.target.value);updProg(e.target.dataset.a)}});
-document.addEventListener('change',e=>{const q=e.target.dataset?.q;if(q){setAns(e.target.dataset.a,q,e.target.value);updProg(e.target.dataset.a)}});
+document.addEventListener('input',e=>{const q=e.target.dataset?.q;if(q){setAns(e.target.dataset.a,q,e.target.value);saveDraft(e.target.dataset.a);updProg(e.target.dataset.a)}});
+document.addEventListener('change',e=>{const q=e.target.dataset?.q;if(q){setAns(e.target.dataset.a,q,e.target.value);saveDraft(e.target.dataset.a);updProg(e.target.dataset.a)}});
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.dataset?.open)S.open=e.target.dataset.open,render()});
 document.addEventListener('click',async e=>{
  const t=e.target.closest('[data-tab],[data-open],#back,#send,[data-save],[data-pub]');if(!t)return;
@@ -607,7 +685,7 @@ document.addEventListener('click',async e=>{
  else if(t.dataset.open){S.open=t.dataset.open;render();window.scrollTo(0,0)}
  else if(t.id==='back'){S.open=null;render()}
  else if(t.id==='send'){const b=BLOCKS.find(x=>x.id===S.open);let fail=false;
-  for(const a of b.acts){S.checked[a.id]=true;const d={answers:S.ans[a.id]||{},at:Date.now()};S.subs[a.id]=d;lsSet('ec-sub-'+a.id,d);
+  for(const a of b.acts){S.checked[a.id]=true;const now=Date.now(),first=firstFor(a,now);const d={answers:S.ans[a.id]||{},at:now,first};S.subs[a.id]=d;lsSet('ec-sub-'+a.id,d);
    if(S.db&&S.canWrite){try{await S.db.doc('subs/'+a.id).set(d)}catch(err){fail=true}}else fail=true}
   S.local=fail;render();const sm=$('#sum');sm?sm.scrollIntoView({block:'start'}):window.scrollTo(0,document.body.scrollHeight)}
  else if(t.dataset.save||t.dataset.pub){const pub=!!t.dataset.pub,id=t.dataset.save||t.dataset.pub,r={m:{},c:$('[data-c="'+id+'"]').value};
@@ -616,6 +694,17 @@ document.addEventListener('click',async e=>{
   S.drafts[id]=r;try{await S.db.doc('private/'+id).set(r);if(pub){await S.db.doc('reviews/'+id).set(r);S.revs[id]=r}t.textContent=pub?'Published ✓':'Draft saved ✓'}catch(err){t.textContent='Could not save'}}
 });
 
+// Copiar el mensaje (respaldo si WhatsApp no abre o el texto no entra en el link)
+document.addEventListener('click',async e=>{const c=e.target.closest('[data-copy]');if(!c)return;
+ const b=BLOCKS.find(x=>x.id===c.dataset.copy);if(!b)return;const txt=waMsg(b),hint=$('#copyhint'),box=$('#copybox');let done=false;
+ try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(txt);done=true}}catch(err){}
+ if(!done){try{const ta=document.createElement('textarea');ta.value=txt;ta.setAttribute('readonly','');ta.style.cssText='position:fixed;top:0;left:0;opacity:0';document.body.appendChild(ta);ta.select();ta.setSelectionRange(0,txt.length);done=document.execCommand('copy');ta.remove()}catch(err){}}
+ if(done){if(box)box.hidden=true;if(hint)hint.textContent='Copied! Now open the chat with your teacher, paste the message and press send.'}
+ else{if(box){box.hidden=false;box.value=txt;box.focus();box.select()}if(hint)hint.textContent='It could not be copied automatically. Press and hold the text below, choose Select all, then Copy.'}});
+// Ir al primer ejercicio con error
+document.addEventListener('click',e=>{if(!e.target.closest('[data-fix]'))return;const t=document.querySelector('.ex.no');if(!t)return;
+ t.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});
+ const f=t.querySelector('input.in,textarea,input[type=radio]');if(f)f.focus({preventScroll:true})});
 function shrink(file){return new Promise((res,rej)=>{const fr=new FileReader();fr.onerror=()=>rej();fr.onload=()=>{const im=new Image();im.onerror=()=>rej();im.onload=()=>{let m=1600,q=.72;for(let i=0;i<8;i++){const r=Math.min(1,m/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=Math.max(1,Math.round(im.width*r));c.height=Math.max(1,Math.round(im.height*r));const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);x.drawImage(im,0,0,c.width,c.height);const d=c.toDataURL('image/jpeg',q);if(d.length<225000)return res(d);m*=.82;q=Math.max(.4,q-.05)}rej()};im.src=fr.result};fr.readAsDataURL(file)})}
 document.addEventListener('change',async e=>{const t=e.target;if(t.id!=='up'||!t.files.length)return;
  const msg=$('#upmsg'),act=t.dataset.act,files=[...t.files];let n=0;
@@ -650,6 +739,7 @@ function refresh(){if(S.tab==='game')return;const el=document.activeElement;if(S
  // ----------------------------------------------
 
  ACTS.forEach(a=>{const s=lsGet('ec-sub-'+a.id);if(s){S.subs[a.id]=s;S.ans[a.id]=s.answers;S.checked[a.id]=true}});
+ ACTS.forEach(a=>{const d=lsGet('ec-draft-'+a.id);if(d&&typeof d==='object'&&Object.keys(d).length)S.ans[a.id]=Object.assign(S.ans[a.id]||{},d)});
  render();
  try{
   if(typeof claude==='undefined')throw 0;
