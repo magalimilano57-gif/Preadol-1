@@ -732,6 +732,760 @@
     ]
   },
   {
+    "id": "ps-ex1",
+    "title": "Regular Verbs: Add -ed",
+    "tag": "Past Simple - Grammar",
+    "block": "Past Simple: Revision and Practice",
+    "inst": "Complete the sentences with the past simple of the verb in brackets.",
+    "theory": "<p><b>Past Simple: Regular Verbs</b></p>\n<p style=\"text-align:center;\"><b>Structure:</b> Subject + Verb + -ed</p>\n<ul>\n  <li><b>Most verbs:</b> add -ed: <i>play → <b>played</b>, watch → <b>watched</b></i></li>\n  <li><b>Verbs ending in -e:</b> add -d: <i>dance → <b>danced</b>, like → <b>liked</b></i></li>\n  <li><b>Consonant + y:</b> change y to i + -ed: <i>study → <b>studied</b>, carry → <b>carried</b></i></li>\n  <li><b>One vowel + one consonant:</b> double the final letter: <i>stop → <b>stopped</b>, plan → <b>planned</b></i></li>\n</ul>\n<p><b>Time expressions:</b> <i>yesterday, last night, last week, two days ago, in 2020</i></p>",
+    "items": [
+      {
+        "id": "ps1q1",
+        "t": "fill",
+        "q": "1. Yesterday I ___ (watch) a film.",
+        "a": [
+          "watched"
+        ],
+        "why": "Regular verbs: add -ed (spelling rules)"
+      },
+      {
+        "id": "ps1q2",
+        "t": "fill",
+        "q": "2. She ___ (visit) her grandmother last weekend.",
+        "a": [
+          "visited"
+        ],
+        "why": "Regular verbs: add -ed (spelling rules)"
+      },
+      {
+        "id": "ps1q3",
+        "t": "fill",
+        "q": "3. We ___ (dance) at the party on Saturday.",
+        "a": [
+          "danced"
+        ],
+        "why": "Verbs ending in -e: add -d"
+      },
+      {
+        "id": "ps1q4",
+        "t": "fill",
+        "q": "4. He ___ (study) for the test last night.",
+        "a": [
+          "studied"
+        ],
+        "why": "Consonant + y: change y to i + -ed"
+      },
+      {
+        "id": "ps1q5",
+        "t": "fill",
+        "q": "5. They ___ (stop) at the shop two days ago.",
+        "a": [
+          "stopped"
+        ],
+        "why": "One vowel + one consonant: double the final letter"
+      },
+      {
+        "id": "ps1q6",
+        "t": "fill",
+        "q": "6. My mum ___ (cook) dinner yesterday.",
+        "a": [
+          "cooked"
+        ],
+        "why": "Regular verbs: add -ed (spelling rules)"
+      },
+      {
+        "id": "ps1q7",
+        "t": "fill",
+        "q": "7. The children ___ (play) in the park last Sunday.",
+        "a": [
+          "played"
+        ],
+        "why": "Vowel + y: just add -ed (played)"
+      },
+      {
+        "id": "ps1q8",
+        "t": "fill",
+        "q": "8. I ___ (carry) my bag to school this morning.",
+        "a": [
+          "carried"
+        ],
+        "why": "Consonant + y: change y to i + -ed"
+      }
+    ]
+  },
+  {
+    "id": "ps-ex2",
+    "title": "Irregular Verbs",
+    "tag": "Past Simple - Grammar",
+    "block": "Past Simple: Revision and Practice",
+    "inst": "Write the past simple of the irregular verb in brackets.",
+    "theory": "<p><b>Past Simple: Irregular Verbs</b></p>\n<p>Irregular verbs do <b>not</b> end in -ed. You have to learn them!</p>\n<ul>\n  <li><i>go → <b>went</b>, have → <b>had</b>, see → <b>saw</b>, eat → <b>ate</b></i></li>\n  <li><i>buy → <b>bought</b>, make → <b>made</b>, take → <b>took</b>, give → <b>gave</b></i></li>\n  <li><i>write → <b>wrote</b>, drink → <b>drank</b>, be → <b>was / were</b></i></li>\n</ul>",
+    "items": [
+      {
+        "id": "ps2q1",
+        "t": "fill",
+        "q": "1. Yesterday we ___ (go) to the cinema.",
+        "a": [
+          "went"
+        ],
+        "why": "Irregular verbs: learn the past form"
+      },
+      {
+        "id": "ps2q2",
+        "t": "fill",
+        "q": "2. I ___ (have) a big breakfast this morning.",
+        "a": [
+          "had"
+        ],
+        "why": "Irregular verbs: learn the past form"
+      },
+      {
+        "id": "ps2q3",
+        "t": "fill",
+        "q": "3. She ___ (see) her friends at the park.",
+        "a": [
+          "saw"
+        ],
+        "why": "Irregular verbs: learn the past form"
+      },
+      {
+        "id": "ps2q4",
+        "t": "fill",
+        "q": "4. They ___ (eat) pizza last night.",
+        "a": [
+          "ate"
+        ],
+        "why": "Irregular verbs: learn the past form"
+      },
+      {
+        "id": "ps2q5",
+        "t": "fill",
+        "q": "5. My dad ___ (buy) a new phone last week.",
+        "a": [
+          "bought"
+        ],
+        "why": "Irregular verbs: learn the past form"
+      },
+      {
+        "id": "ps2q6",
+        "t": "fill",
+        "q": "6. We ___ (make) a cake for my mum's birthday.",
+        "a": [
+          "made"
+        ],
+        "why": "Irregular verbs: learn the past form"
+      },
+      {
+        "id": "ps2q7",
+        "t": "fill",
+        "q": "7. He ___ (take) a lot of photos on holiday.",
+        "a": [
+          "took"
+        ],
+        "why": "Irregular verbs: learn the past form"
+      },
+      {
+        "id": "ps2q8",
+        "t": "fill",
+        "q": "8. My teacher ___ (give) us homework on Friday.",
+        "a": [
+          "gave"
+        ],
+        "why": "Irregular verbs: learn the past form"
+      },
+      {
+        "id": "ps2q9",
+        "t": "fill",
+        "q": "9. I ___ (write) a long email to my cousin.",
+        "a": [
+          "wrote"
+        ],
+        "why": "Irregular verbs: learn the past form"
+      },
+      {
+        "id": "ps2q10",
+        "t": "fill",
+        "q": "10. The children ___ (drink) orange juice at the party.",
+        "a": [
+          "drank"
+        ],
+        "why": "Irregular verbs: learn the past form"
+      }
+    ]
+  },
+  {
+    "id": "ps-ex3",
+    "title": "Affirmative and Negative",
+    "tag": "Past Simple - Grammar",
+    "block": "Past Simple: Revision and Practice",
+    "inst": "Complete the sentences with the past simple (+ or -).",
+    "theory": "<p><b>Past Simple: Affirmative and Negative</b></p>\n<ul>\n  <li><b>Affirmative (+):</b> <i>She <b>visited</b> her aunt.</i> / <i>He <b>went</b> home.</i></li>\n  <li><b>Negative (-):</b> Subject + <b>didn't</b> + base form: <i>She <b>didn't visit</b> her aunt.</i> / <i>He <b>didn't go</b> home.</i></li>\n</ul>\n<p><b>Remember:</b> after <i>didn't</i> the verb stays in the base form (didn't go, NOT didn't went).</p>",
+    "items": [
+      {
+        "id": "ps3q1",
+        "t": "fill",
+        "q": "1. Tom ___ (not go) to school yesterday because he was ill.",
+        "a": [
+          "didn't go",
+          "did not go"
+        ],
+        "why": "Negative: didn't + base form"
+      },
+      {
+        "id": "ps3q2",
+        "t": "fill",
+        "q": "2. We ___ (eat) pizza last night.",
+        "a": [
+          "ate"
+        ],
+        "why": "Affirmative: irregular verb (eat - ate)"
+      },
+      {
+        "id": "ps3q3",
+        "t": "fill",
+        "q": "3. I ___ (not do) my homework on Friday.",
+        "a": [
+          "didn't do",
+          "did not do"
+        ],
+        "why": "Negative: didn't + base form"
+      },
+      {
+        "id": "ps3q4",
+        "t": "fill",
+        "q": "4. She ___ (buy) a new bag last week.",
+        "a": [
+          "bought"
+        ],
+        "why": "Affirmative: irregular verb (buy - bought)"
+      },
+      {
+        "id": "ps3q5",
+        "t": "fill",
+        "q": "5. They ___ (not see) the film.",
+        "a": [
+          "didn't see",
+          "did not see"
+        ],
+        "why": "Negative: didn't + base form"
+      },
+      {
+        "id": "ps3q6",
+        "t": "fill",
+        "q": "6. My dad ___ (make) a cake for my birthday.",
+        "a": [
+          "made"
+        ],
+        "why": "Affirmative: irregular verb (make - made)"
+      },
+      {
+        "id": "ps3q7",
+        "t": "fill",
+        "q": "7. The students ___ (not have) English class yesterday.",
+        "a": [
+          "didn't have",
+          "did not have"
+        ],
+        "why": "Negative: didn't + base form"
+      }
+    ]
+  },
+  {
+    "id": "ps-ex4",
+    "title": "Choose the Correct Option",
+    "tag": "Past Simple - Grammar",
+    "block": "Past Simple: Revision and Practice",
+    "inst": "Choose the correct option. Look at the time expression in each sentence.",
+    "items": [
+      {
+        "id": "ps4q1",
+        "t": "mc",
+        "q": "1. Last night we ___ a horror film.",
+        "o": [
+          "watched",
+          "watch"
+        ],
+        "a": "watched",
+        "why": "Past simple with time expressions"
+      },
+      {
+        "id": "ps4q2",
+        "t": "mc",
+        "q": "2. She ___ to the beach two days ago.",
+        "o": [
+          "went",
+          "goes"
+        ],
+        "a": "went",
+        "why": "Past simple with time expressions"
+      },
+      {
+        "id": "ps4q3",
+        "t": "mc",
+        "q": "3. I ___ my keys yesterday.",
+        "o": [
+          "didn't find",
+          "didn't found"
+        ],
+        "a": "didn't find",
+        "why": "After didn't, use the base form"
+      },
+      {
+        "id": "ps4q4",
+        "t": "mc",
+        "q": "4. They ___ at home on Saturday.",
+        "o": [
+          "was",
+          "were"
+        ],
+        "a": "were",
+        "why": "Past of to be: they were"
+      },
+      {
+        "id": "ps4q5",
+        "t": "mc",
+        "q": "5. ___ you play football last weekend?",
+        "o": [
+          "Did",
+          "Do"
+        ],
+        "a": "Did",
+        "why": "Past simple questions start with Did"
+      },
+      {
+        "id": "ps4q6",
+        "t": "mc",
+        "q": "6. He ___ a big breakfast this morning.",
+        "o": [
+          "have",
+          "had"
+        ],
+        "a": "had",
+        "why": "Past simple with time expressions"
+      },
+      {
+        "id": "ps4q7",
+        "t": "mc",
+        "q": "7. We ___ pizza yesterday. We ate pasta.",
+        "o": [
+          "didn't eat",
+          "didn't ate"
+        ],
+        "a": "didn't eat",
+        "why": "After didn't, use the base form"
+      },
+      {
+        "id": "ps4q8",
+        "t": "mc",
+        "q": "8. The film ___ at 8 o'clock last night.",
+        "o": [
+          "started",
+          "starts"
+        ],
+        "a": "started",
+        "why": "Past simple with time expressions"
+      }
+    ]
+  },
+  {
+    "id": "ps-ex5",
+    "title": "Correct the Mistake",
+    "tag": "Past Simple - Grammar",
+    "block": "Past Simple: Revision and Practice",
+    "inst": "Find the mistake in each sentence and write the correct sentence.",
+    "items": [
+      {
+        "id": "ps5q1",
+        "t": "open",
+        "q": "1. She didn't went to school yesterday.",
+        "a": [
+          "She didn't go to school yesterday.",
+          "She did not go to school yesterday."
+        ],
+        "why": "After didn't, the verb goes in the base form"
+      },
+      {
+        "id": "ps5q2",
+        "t": "open",
+        "q": "2. Did you watched the film last night?",
+        "a": [
+          "Did you watch the film last night?"
+        ],
+        "why": "After did, the verb goes in the base form"
+      },
+      {
+        "id": "ps5q3",
+        "t": "open",
+        "q": "3. I buyed a new phone last week.",
+        "a": [
+          "I bought a new phone last week."
+        ],
+        "why": "Buy is irregular: bought"
+      },
+      {
+        "id": "ps5q4",
+        "t": "open",
+        "q": "4. They was at home on Sunday.",
+        "a": [
+          "They were at home on Sunday."
+        ],
+        "why": "Past of to be: they were"
+      },
+      {
+        "id": "ps5q5",
+        "t": "open",
+        "q": "5. We didn't saw the sharks at the aquarium.",
+        "a": [
+          "We didn't see the sharks at the aquarium.",
+          "We did not see the sharks at the aquarium."
+        ],
+        "why": "After didn't, the verb goes in the base form"
+      },
+      {
+        "id": "ps5q6",
+        "t": "open",
+        "q": "6. My mother gived me a present.",
+        "a": [
+          "My mother gave me a present."
+        ],
+        "why": "Give is irregular: gave"
+      }
+    ]
+  },
+  {
+    "id": "ps-ex6",
+    "title": "Questions and Short Answers",
+    "tag": "Past Simple - Grammar",
+    "block": "Past Simple: Revision and Practice",
+    "inst": "For each prompt, write a question with Did. Then write the short answer: Yes (✔) or No (✖).",
+    "theory": "<p><b>Past Simple: Questions and Short Answers</b></p>\n<p style=\"text-align:center;\"><b>Structure:</b> Did + subject + base form...?</p>\n<ul>\n  <li><i>Did you watch TV?</i> → <i>Yes, I <b>did</b>. / No, I <b>didn't</b>.</i></li>\n  <li><i>Did he play football?</i> → <i>Yes, he <b>did</b>. / No, he <b>didn't</b>.</i></li>\n  <li><i>Did they go to the park?</i> → <i>Yes, they <b>did</b>. / No, they <b>didn't</b>.</i></li>\n</ul>",
+    "items": [
+      {
+        "id": "ps6q1",
+        "t": "open",
+        "q": "1. Write the question: you / watch / TV last night",
+        "a": [
+          "Did you watch TV last night?"
+        ],
+        "why": "Questions: Did + subject + base form"
+      },
+      {
+        "id": "ps6q2",
+        "t": "open",
+        "q": "2. Now write the short answer to question 1: Yes (✔)",
+        "a": [
+          "Yes, I did."
+        ],
+        "why": "Short answer: Yes, I did."
+      },
+      {
+        "id": "ps6q3",
+        "t": "open",
+        "q": "3. Write the question: Tom / play / football on Saturday",
+        "a": [
+          "Did Tom play football on Saturday?"
+        ],
+        "why": "Questions: Did + subject + base form"
+      },
+      {
+        "id": "ps6q4",
+        "t": "open",
+        "q": "4. Now write the short answer to question 3: No (✖)",
+        "a": [
+          "No, he didn't.",
+          "No, he did not."
+        ],
+        "why": "Short answer with he: No, he didn't."
+      },
+      {
+        "id": "ps6q5",
+        "t": "open",
+        "q": "5. Write the question: Sarah and Ana / go / to the park",
+        "a": [
+          "Did Sarah and Ana go to the park?"
+        ],
+        "why": "Questions: Did + subject + base form"
+      },
+      {
+        "id": "ps6q6",
+        "t": "open",
+        "q": "6. Now write the short answer to question 5: Yes (✔)",
+        "a": [
+          "Yes, they did."
+        ],
+        "why": "Short answer with they: Yes, they did."
+      },
+      {
+        "id": "ps6q7",
+        "t": "open",
+        "q": "7. Write the question: the cat / eat / the fish",
+        "a": [
+          "Did the cat eat the fish?"
+        ],
+        "why": "Questions: Did + subject + base form"
+      },
+      {
+        "id": "ps6q8",
+        "t": "open",
+        "q": "8. Now write the short answer to question 7: No (✖)",
+        "a": [
+          "No, it didn't.",
+          "No, it did not."
+        ],
+        "why": "Short answer with it: No, it didn't."
+      }
+    ]
+  },
+  {
+    "id": "ps-ex7",
+    "title": "Past of To Be: Was and Were",
+    "tag": "Past Simple - Grammar",
+    "block": "Past Simple: Revision and Practice",
+    "inst": "Complete with was, were, wasn't or weren't.",
+    "theory": "<p><b>Past Simple of To Be</b></p>\n<ul>\n  <li><b>I / He / She / It</b> → <i><b>was</b> / <b>wasn't</b></i></li>\n  <li><b>We / You / They</b> → <i><b>were</b> / <b>weren't</b></i></li>\n  <li><b>Questions:</b> <i><b>Was</b> he at home?</i> / <i><b>Were</b> you at the party?</i></li>\n</ul>\n<p>We do <b>not</b> use <i>did</i> with the verb to be.</p>",
+    "items": [
+      {
+        "id": "ps7q1",
+        "t": "fill",
+        "q": "1. Last night I ___ very tired, so I went to bed early.",
+        "a": [
+          "was"
+        ],
+        "why": "Past of to be: was / were"
+      },
+      {
+        "id": "ps7q2",
+        "t": "fill",
+        "q": "2. My parents ___ at home yesterday. They were at work.",
+        "a": [
+          "weren't",
+          "were not"
+        ],
+        "why": "Past of to be: was / were"
+      },
+      {
+        "id": "ps7q3",
+        "t": "fill",
+        "q": "3. ___ you at the party on Saturday?",
+        "a": [
+          "Were"
+        ],
+        "why": "Past of to be: was / were"
+      },
+      {
+        "id": "ps7q4",
+        "t": "fill",
+        "q": "4. The film ___ boring. We loved it!",
+        "a": [
+          "wasn't",
+          "was not"
+        ],
+        "why": "Past of to be: was / were"
+      },
+      {
+        "id": "ps7q5",
+        "t": "fill",
+        "q": "5. Tom and Ana ___ in the park two hours ago.",
+        "a": [
+          "were"
+        ],
+        "why": "Past of to be: was / were"
+      },
+      {
+        "id": "ps7q6",
+        "t": "fill",
+        "q": "6. Where ___ you last weekend?",
+        "a": [
+          "were"
+        ],
+        "why": "Past of to be: was / were"
+      }
+    ]
+  },
+  {
+    "id": "ps-ex8",
+    "title": "Wh- Questions: Match",
+    "tag": "Past Simple - Grammar",
+    "block": "Past Simple: Revision and Practice",
+    "inst": "Match each question with its answer.",
+    "theory": "<p><b>Wh- Questions in the Past Simple</b></p>\n<p style=\"text-align:center;\"><b>Structure:</b> Wh- word + did + subject + base form...?</p>\n<ul>\n  <li><i><b>What</b> did you eat?</i> / <i><b>Where</b> did you go?</i> / <i><b>When</b> did you start?</i></li>\n  <li><i><b>Who</b> did you see?</i> / <i><b>Why</b> did you stay at home?</i></li>\n</ul>",
+    "items": [
+      {
+        "id": "ps8q1",
+        "t": "mc",
+        "q": "1. What did you eat for lunch?",
+        "o": [
+          "A. I went to the beach.",
+          "B. I ate pasta.",
+          "C. I saw my cousin.",
+          "D. Because I was ill.",
+          "E. Two years ago."
+        ],
+        "a": "B. I ate pasta.",
+        "why": "Wh- questions in the past simple"
+      },
+      {
+        "id": "ps8q2",
+        "t": "mc",
+        "q": "2. Where did you go last weekend?",
+        "o": [
+          "A. I went to the beach.",
+          "B. I ate pasta.",
+          "C. I saw my cousin.",
+          "D. Because I was ill.",
+          "E. Two years ago."
+        ],
+        "a": "A. I went to the beach.",
+        "why": "Wh- questions in the past simple"
+      },
+      {
+        "id": "ps8q3",
+        "t": "mc",
+        "q": "3. When did you start school?",
+        "o": [
+          "A. I went to the beach.",
+          "B. I ate pasta.",
+          "C. I saw my cousin.",
+          "D. Because I was ill.",
+          "E. Two years ago."
+        ],
+        "a": "E. Two years ago.",
+        "why": "Wh- questions in the past simple"
+      },
+      {
+        "id": "ps8q4",
+        "t": "mc",
+        "q": "4. Who did you see at the park?",
+        "o": [
+          "A. I went to the beach.",
+          "B. I ate pasta.",
+          "C. I saw my cousin.",
+          "D. Because I was ill.",
+          "E. Two years ago."
+        ],
+        "a": "C. I saw my cousin.",
+        "why": "Wh- questions in the past simple"
+      },
+      {
+        "id": "ps8q5",
+        "t": "mc",
+        "q": "5. Why did you stay at home?",
+        "o": [
+          "A. I went to the beach.",
+          "B. I ate pasta.",
+          "C. I saw my cousin.",
+          "D. Because I was ill.",
+          "E. Two years ago."
+        ],
+        "a": "D. Because I was ill.",
+        "why": "Wh- questions in the past simple"
+      }
+    ]
+  },
+  {
+    "id": "ps-ex9",
+    "title": "A Weekend Chat: Dialogue",
+    "tag": "Past Simple - Dialogue",
+    "block": "Past Simple: Revision and Practice",
+    "inst": "Complete the dialogue between Ana and Tom. Read the dialogue, then choose the correct question for each gap.",
+    "dialogue": {
+      "lines": [
+        [
+          "Ana",
+          "Hi Tom! {1}"
+        ],
+        [
+          "Tom",
+          "It was great, thanks!"
+        ],
+        [
+          "Ana",
+          "{2}"
+        ],
+        [
+          "Tom",
+          "I went to the cinema with my cousin."
+        ],
+        [
+          "Ana",
+          "{3}"
+        ],
+        [
+          "Tom",
+          "We watched a funny comedy."
+        ],
+        [
+          "Ana",
+          "{4}"
+        ],
+        [
+          "Tom",
+          "Yes, I did. It was really funny!"
+        ]
+      ]
+    },
+    "theory": "<p><b>Talking about the Past</b></p>\n<ul>\n  <li><i>How was your weekend?</i> → <i>It was great! / It was boring.</i></li>\n  <li><i>Where did you go?</i> → <i>I went to...</i></li>\n  <li><i>What did you do / watch / eat?</i> → <i>I watched / ate...</i></li>\n  <li><i>Did you like it?</i> → <i>Yes, I did. / No, I didn't.</i></li>\n</ul>",
+    "items": [
+      {
+        "id": "ps9q1",
+        "t": "mc",
+        "q": "1. Which question goes in gap 1?",
+        "o": [
+          "How was your weekend?",
+          "Where did you go?",
+          "What did you watch?",
+          "Did you like it?",
+          "Who did you see?"
+        ],
+        "a": "How was your weekend?",
+        "why": "Questions about the past"
+      },
+      {
+        "id": "ps9q2",
+        "t": "mc",
+        "q": "2. Which question goes in gap 2?",
+        "o": [
+          "How was your weekend?",
+          "Where did you go?",
+          "What did you watch?",
+          "Did you like it?",
+          "Who did you see?"
+        ],
+        "a": "Where did you go?",
+        "why": "Questions about the past"
+      },
+      {
+        "id": "ps9q3",
+        "t": "mc",
+        "q": "3. Which question goes in gap 3?",
+        "o": [
+          "How was your weekend?",
+          "Where did you go?",
+          "What did you watch?",
+          "Did you like it?",
+          "Who did you see?"
+        ],
+        "a": "What did you watch?",
+        "why": "Questions about the past"
+      },
+      {
+        "id": "ps9q4",
+        "t": "mc",
+        "q": "4. Which question goes in gap 4?",
+        "o": [
+          "How was your weekend?",
+          "Where did you go?",
+          "What did you watch?",
+          "Did you like it?",
+          "Who did you see?"
+        ],
+        "a": "Did you like it?",
+        "why": "Questions about the past"
+      }
+    ]
+  }
+],
+  {
     "id": "bw-ex1",
     "title": "Before Listening: Past Simple",
     "tag": "Listening - Past Simple",
