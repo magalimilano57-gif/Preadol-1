@@ -261,6 +261,7 @@ button.s{border-radius:99px}
 .fb.good::before{content:"\2713  "}
 @media (prefers-reduced-motion:reduce){button.p,a.wa,.ex,.opt{transition:none}}
 .act-img{margin:12px 0;text-align:center}.act-img img{max-width:100%;height:auto;border-radius:14px;border:2px solid var(--line);background:#fff;box-shadow:0 2px 10px rgba(74,107,47,.07)}.act-img figcaption{font-size:14px;color:var(--mut);margin-top:4px}
+.act-vid{margin:12px 0;text-align:center}.act-vid .vid{position:relative;aspect-ratio:16/9;width:100%;border-radius:14px;overflow:hidden;border:2px solid var(--line);background:#000;box-shadow:0 2px 10px rgba(74,107,47,.07)}.act-vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.act-vid figcaption{font-size:14px;color:var(--mut);margin-top:6px}.act-vid figcaption a{color:inherit;text-decoration:underline}
 .dlg{margin:12px 0;background:var(--card);border:2px solid var(--line);border-radius:14px;padding:12px 16px}.dlg p{margin:6px 0}.dlg i{color:var(--mut)}
 .dbox{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}.dbox span{background:var(--gl);border:1.5px solid var(--g);border-radius:99px;padding:2px 12px;font-weight:700;font-size:15px}
 .gap{display:inline-block;min-width:44px;text-align:center;background:#fff;border:2px dashed var(--g);border-radius:8px;padding:0 8px;font-weight:800;color:var(--gd)}
@@ -524,6 +525,10 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-say]');if(
  if(ss.speaking){ss.cancel();b.textContent='▶ Listen';return}
  const u=new SpeechSynthesisUtterance(b.parentElement.querySelector('.th-body').textContent.replace(/✗/g,'wrong').replace(/\s+/g,' '));u.lang='en-US';u.rate=.9;
  u.onend=u.onerror=()=>{b.textContent='▶ Listen'};b.textContent='■ Stop';ss.speak(u)});
+// Video de YouTube dentro de una actividad: "video":"ID" o "video":"https://youtu.be/ID" (también acepta {id|url,title,start})
+function vidHTML(v){const o=typeof v==='string'?{id:v}:(v||{});const m=String(o.id||o.url||'').match(/(?:v=|youtu\.be\/|embed\/|shorts\/)?([A-Za-z0-9_-]{11})(?:[?&#]|$)/);if(!m)return '';
+ const id=m[1],st=parseInt(o.start,10)>0?'&start='+parseInt(o.start,10):'',ti=o.title||'Listening video';
+ return `<figure class="act-vid"><div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0&modestbranding=1&playsinline=1${st}" title="${esc(ti)}" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><figcaption>Press play and listen carefully. If the video does not load, <a href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener">open it on YouTube</a>.</figcaption></figure>`}
 function dlgHTML(d){return '<div class="dlg">'+(d.box?'<div class="dbox">'+d.box.map(x=>'<span>'+esc(x)+'</span>').join('')+'</div>':'')+d.lines.map(l=>'<p>'+(l[0]?'<b>'+esc(l[0])+':</b> ':'<i>')+esc(l[1]).replace(/\{(\d+)\}/g,'<span class="gap">$1</span>')+(l[0]?'':'</i>')+'</p>').join('')+'</div>'}
 function viewAct(b){
  const [st]=blockStatus(b);const multi=b.acts.length>1;const chk=b.acts.every(a=>S.checked[a.id]);const sc=blockScore(b);
@@ -533,7 +538,7 @@ function viewAct(b){
   const head=multi?`<div class="sec-h"><span class="sec-n">${i+1}</span><div><span class="chip">${esc(a.tag)} · ${a.items.length} exercises</span><h3>${esc(short(a.title))}</h3>${a.inst?`<p class="sec-inst">${esc(a.inst)}</p>`:''}</div></div>`:(a.inst?`<div class="note">${esc(a.inst)}</div>`:'');
   const theory=a.theory?`<details class="th" open><summary><span class="th-ic">${IC.book}</span>Theory: read this before you start</summary><div class="b"><div class="th-body">${fmtTheory(a.theory)}</div></div></details>`:'';
   const res=ck&&multi?`<div class="card sec-res"><b>Section ${i+1} result:</b> ${s1.n} / ${s1.total}${s1.pend?` · ${s1.pend} open questions waiting for your teacher`:''}</div>`:'';
-  return `${i?`<div class="sep">${LOGO(26)}</div>`:''}<section class="sec" id="sec-${i}" style="--sc:${c[0]};--st:${c[1]}">${progHTML(a,i)}${head}${theory}${a.img?`<figure class="act-img"><a href="${esc(a.img)}" target="_blank" rel="noopener"><img src="${esc(a.img)}" alt="${esc(a.imgAlt||'')}" loading="lazy"></a><figcaption>Tap the picture to see it bigger.</figcaption></figure>`:''}${a.dialogue?dlgHTML(a.dialogue):''}${a.items.map((it,j)=>renderItem(a,it,j)).join('')}${res}</section>`}).join('');
+  return `${i?`<div class="sep">${LOGO(26)}</div>`:''}<section class="sec" id="sec-${i}" style="--sc:${c[0]};--st:${c[1]}">${progHTML(a,i)}${head}${theory}${a.img?`<figure class="act-img"><a href="${esc(a.img)}" target="_blank" rel="noopener"><img src="${esc(a.img)}" alt="${esc(a.imgAlt||'')}" loading="lazy"></a><figcaption>Tap the picture to see it bigger.</figcaption></figure>`:''}${a.video?vidHTML(a.video):''}${a.dialogue?dlgHTML(a.dialogue):''}${a.items.map((it,j)=>renderItem(a,it,j)).join('')}${res}</section>`}).join('');
  const msgs=b.acts.filter(a=>S.revs[a.id]?.c).map(a=>`<div class="why" style="border-color:var(--g)"><b>Message from your teacher${multi?' ('+esc(short(a.title))+')':''}:</b> ${esc(S.revs[a.id].c)}</div>`).join('');
  const tc=typoCount(b);
  const bad=(a,ans)=>a.items.filter(it=>{if(manual(it))return false;const k=grade(it,(ans||{})[it.id]).k;return k==='no'||k==='blank'}).length;
